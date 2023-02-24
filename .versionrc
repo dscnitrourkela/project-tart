@@ -1,0 +1,70 @@
+{
+	"name": "conventionalcommits",
+	"types": [
+		{
+			"type": "feat",
+			"hidden": false,
+			"section": "🚀 Features"
+		},
+		{
+			"type": "fix",
+			"hidden": false,
+			"section": "🐛 Bug Fixes"
+		},
+		{
+			"type": "chore",
+			"hidden": false,
+			"section": "🛠 Others"
+		},
+		{
+			"type": "ci",
+			"section": "🛠 Others",
+			"hidden": false
+		},
+		{
+			"type": "style",
+			"section": "🛠 Others",
+			"hidden": false
+		},
+		{
+			"type": "build",
+			"section": "🛠 Build",
+			"hidden": false
+		},
+		{
+			"type": "docs",
+			"hidden": false,
+			"section": "📃 Documentation"
+		},
+		{
+			"type": "refactor",
+			"hidden": false,
+			"section": "🕸 Refactors"
+		},
+		{
+			"type": "perf",
+			"hidden": false,
+			"section": "🏎 Performance"
+		},
+		{
+			"type": "spec",
+			"hidden": false,
+			"section": "🤖 Specification"
+		},
+		{
+			"type": "test",
+			"section": "🤖 Test",
+			"hidden": false
+		},
+		{
+			"type": "revert",
+			"section": "🔄 Reverts",
+			"hidden": false
+		}
+	],
+	"issuePrefixes": ["#"],
+	"issueUrlFormat": "{{host}}/{{owner}}/{{repository}}/issues/{{id}}",
+	"commitUrlFormat": "{{host}}/{{owner}}/{{repository}}/commit/{{hash}}",
+	"compareUrlFormat": "{{host}}/{{owner}}/{{repository}}/compare/{{previousTag}}...{{currentTag}}",
+	"userUrlFormat": "{{host}}/{{user}}"
+}
