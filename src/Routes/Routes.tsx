@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
-const Homepage = React.lazy(() => import('components/Pages/Home'));
+const Homepage = React.lazy(() => import('Components/Pages/Home'));
 
 const Routes: React.FC = () => {
 	return (
