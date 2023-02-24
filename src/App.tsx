@@ -1,28 +1,24 @@
+import React from 'react';
 import './App.css';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 
+import Routes from 'Routes';
+
 const Container = styled.div`
-  ${tw`
-  h-60
-  m-2.5
-  rounded-2xl
-  flex
-  flex-col
-  justify-center
-  items-center
+	${tw`
+  text-orange-900
+  font-extrabold
+  text-3xl
   `};
 `;
 
-
-function App() {
-  return (
-    <Container>
-      <h1 className="text-3xl font-bold underline text-red-600">
-      Project Tart
-    </h1>
-    </Container>
-  );
-}
+const App: React.FC = () => {
+	return (
+		<Container>
+			<Routes />
+		</Container>
+	);
+};
 
 export default App;
