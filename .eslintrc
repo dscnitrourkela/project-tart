@@ -1,0 +1,23 @@
+{
+	"root": true,
+	"parser": "@typescript-eslint/parser",
+	"plugins": ["@typescript-eslint", "prettier"],
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/eslint-recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:react/recommended",
+		"plugin:react-hooks/recommended",
+		"prettier"
+	],
+	"rules": {
+		"no-console": 1,
+		"prettier/prettier": 2,
+		"react/prop-types": 0
+	},
+	"settings": {
+		"react": {
+			"version": "16.3.1"
+		}
+	}
+}
