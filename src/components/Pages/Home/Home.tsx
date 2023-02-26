@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 
-import { Navbar, Footer } from '../../molecules';
+import { Navbar, Footer } from 'Components/molecules';
 
 const Wrapper = styled.div`
 	${tw`
