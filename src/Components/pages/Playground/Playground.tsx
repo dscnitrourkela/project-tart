@@ -5,7 +5,7 @@ import { Body1, Body2, Button, Caption, Heading1, Heading2, Heading3, Heading4, 
 const Playground: React.FC = () => {
 	return (
 		<>
-			<Button btnText="Hello" filled={true} />
+			<Button btnText="Label" filled={true} success={true} />
 			<Heading1>Heading 1</Heading1>
 			<Heading2>Heading 2</Heading2>
 			<Heading3>Heading 3</Heading3>

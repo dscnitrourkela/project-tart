@@ -24,6 +24,8 @@ const Wrapper = styled.button<StyleProps>`
 				: '#FFFFFF'
 			: 'linear-gradient(81.68deg, #6B014E -4.79%, #03016B 103.83%)'};
 	${tw`
+    flex
+    gap-6
     px-[32px]
     py-[10px]
     sm:px-[48px]  
@@ -36,6 +38,7 @@ const Button: React.FC<ButtonProps> = ({ btnText = 'button', filled = false, suc
 	return (
 		<Wrapper filled={filled} success={success}>
 			<ButtonText>{btnText}</ButtonText>
+			{success && <img src="tick.svg" />}
 		</Wrapper>
 	);
 };
