@@ -1,8 +1,8 @@
 import React from 'react';
+
+import { Footer, Navbar } from 'Components/molecules';
 import styled from 'styled-components';
 import tw from 'twin.macro';
-
-import { Navbar, Footer } from 'Components/molecules';
 
 const Wrapper = styled.div`
 	${tw`
@@ -10,7 +10,7 @@ const Wrapper = styled.div`
  `};
 `;
 
-const Button: React.FC = () => {
+const Home: React.FC = () => {
 	return (
 		<Wrapper>
 			<Navbar />
@@ -20,4 +20,4 @@ const Button: React.FC = () => {
 	);
 };
 
-export default Button;
+export default Home;
