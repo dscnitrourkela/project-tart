@@ -1,7 +1,9 @@
 import React, { Suspense } from 'react';
+
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
 const Homepage = React.lazy(() => import('Components/pages/Home'));
+const Playground = React.lazy(() => import('Components/pages/Playground'));
 
 const Routes: React.FC = () => {
 	return (
@@ -9,7 +11,7 @@ const Routes: React.FC = () => {
 			<Router basename="/">
 				<Switch>
 					<Route exact path="/" component={Homepage} />
-					<Route exact path="/playground" component={Homepage} />
+					<Route path="/playground" component={Playground} />
 				</Switch>
 			</Router>
 		</Suspense>
