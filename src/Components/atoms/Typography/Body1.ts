@@ -4,7 +4,7 @@ import tw from 'twin.macro';
 import { Props } from './types';
 
 export default styled.h1<Props>`
-	font-weight: ${(props) => (props.bold ? 300 : 500)};
+	font-weight: ${(props) => (props.bold ? 500 : 300)};
 	${tw`
       text-color-primary
 

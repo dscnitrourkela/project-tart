@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { Body1, Body2, Button, Caption, Heading1, Heading2, Heading3, Heading4, NavText } from 'Components/atoms';
+import FAQSection from 'Components/molecules/FAQSection/FAQSection';
 
 const Playground: React.FC = () => {
 	return (
@@ -14,6 +15,7 @@ const Playground: React.FC = () => {
 			<Body2>Body 2</Body2>
 			<Caption>Caption</Caption>
 			<NavText>Nav</NavText>
+			<FAQSection />
 		</>
 	);
 };
