@@ -22,7 +22,7 @@ export const Container = styled.div<DisplayProps>`
   `}
 `;
 export const Question = styled.div<DisplayProps>`
-	border-bottom: ${(props) => (props.display ? '1px solid #D9D9D9' : 'none')};
+	border-bottom: ${(props) => (props.$display ? '1px solid #D9D9D9' : 'none')};
 	${tw`
     flex
     justify-between
@@ -34,7 +34,7 @@ export const Question = styled.div<DisplayProps>`
 export const Answer = styled.div<DisplayProps>`
 	animation: ${(props) => (props.answered ? grow : shrink)} 0.2s linear;
 	overflow: hidden;
-	display: ${(props) => (props.display ? 'block' : 'none')};
+	display: ${(props) => (props.$display ? 'block' : 'none')};
 	${tw`
     py-3
     md:py-4  

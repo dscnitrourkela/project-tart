@@ -8,5 +8,5 @@ export interface FAQProps {
 export interface DisplayProps {
 	children?: React.ReactNode | React.ReactNode[];
 	answered?: boolean;
-	display?: boolean;
+	$display?: boolean;
 }

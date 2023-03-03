@@ -19,7 +19,7 @@ const FAQ: React.FC<FAQProps> = ({ question = '', answer = '' }) => {
 
 	return (
 		<Container>
-			<Question answered={answered} display={display}>
+			<Question answered={answered} $display={display}>
 				<Body2 bold>{question}</Body2>
 				<FAQButton
 					answered={answered}
@@ -29,7 +29,7 @@ const FAQ: React.FC<FAQProps> = ({ question = '', answer = '' }) => {
 					<img height="auto" width="100%" src="FAQ_arrow.svg" />
 				</FAQButton>
 			</Question>
-			<Answer answered={answered} display={display}>
+			<Answer answered={answered} $display={display}>
 				<Body1>{answer}</Body1>
 			</Answer>
 		</Container>

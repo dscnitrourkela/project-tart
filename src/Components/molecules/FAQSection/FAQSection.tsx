@@ -10,8 +10,8 @@ const FAQSection: React.FC = () => {
 		<Container>
 			<Title bold>F.A.Q.s</Title>
 			<FAQContainer>
-				{FAQs.map(({ question, answer }, index) => (
-					<FAQ key={index} question={question} answer={answer} />
+				{FAQs.map(({ question, answer }) => (
+					<FAQ key={question} question={question} answer={answer} />
 				))}
 			</FAQContainer>
 		</Container>
