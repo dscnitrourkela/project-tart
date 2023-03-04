@@ -33,7 +33,7 @@ export const footer = {
 			{ text: 'PRO SHOW', href: '#' },
 			{ text: 'FLAGSHIP EVENTS', href: '#' },
 			{ text: 'MAIN EVENTS', href: '#' },
-			{ text: 'LECTURE & WORKSHOP', href: '#' },
+			{ text: 'LECTURES & WORKSHOPS', href: '#' },
 			{ text: 'FUN EVENTS', href: '#' },
 			{ text: 'EXHIBITION', href: '#' },
 		],
