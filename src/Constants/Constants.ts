@@ -30,7 +30,7 @@ export const footer = {
 		title: 'Quick Links',
 		impLinks: [
 			// { text: 'LOGIN/REGISTER', href: '#' },
-			{ text: 'PRO SHOW', href: '#' },
+			{ text: 'PRO SHOWS', href: '#' },
 			{ text: 'FLAGSHIP EVENTS', href: '#' },
 			{ text: 'MAIN EVENTS', href: '#' },
 			{ text: 'LECTURES & WORKSHOPS', href: '#' },
