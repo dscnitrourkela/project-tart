@@ -7,6 +7,7 @@ import tw from 'twin.macro';
 import { ButtonProps, StyleProps } from './types';
 
 const Wrapper = styled.button<StyleProps>`
+	width: ${(props) => (props.full ? '100%' : 'auto')};
 	border-color: ${(props) => (props.success ? '#5BDB8E' : 'transparent')};
 	border-style: solid;
 	border-width: 2px;
@@ -25,6 +26,7 @@ const Wrapper = styled.button<StyleProps>`
 			: 'linear-gradient(81.68deg, #6B014E -4.79%, #03016B 103.83%)'};
 	${tw`
     flex
+    justify-center
     gap-6
     px-[32px]
     py-[10px]
@@ -34,9 +36,9 @@ const Wrapper = styled.button<StyleProps>`
   `}
 `;
 
-const Button: React.FC<ButtonProps> = ({ btnText = 'button', filled = false, success = false }) => {
+const Button: React.FC<ButtonProps> = ({ btnText = 'button', filled = false, success = false, full = false }) => {
 	return (
-		<Wrapper filled={filled} success={success}>
+		<Wrapper filled={filled} success={success} full={full}>
 			<ButtonText>{btnText}</ButtonText>
 			{success && <img src="tick.svg" />}
 		</Wrapper>
