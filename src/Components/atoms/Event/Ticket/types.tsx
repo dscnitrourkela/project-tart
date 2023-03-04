@@ -8,7 +8,7 @@ export interface TicketProps {
 	prizes: string;
 	description: {
 		id: number;
-		text: string;
+		desc: string;
 	}[];
 	contact?: {
 		name: string;

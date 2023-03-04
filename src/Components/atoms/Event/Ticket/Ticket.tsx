@@ -14,9 +14,9 @@ const Ticket: React.FC<{ data: TicketProps; onClick: () => void }> = ({ data, on
 			<LeftCard>
 				<Heading4>About</Heading4>
 				<Description>
-					{description.map(({ id, text }) => (
+					{description.map(({ id, desc }) => (
 						<ul key={id}>
-							<Body2>{text}</Body2>
+							<Body2>{desc}</Body2>
 						</ul>
 					))}
 				</Description>

@@ -1,23 +1,18 @@
-import React from 'react';
 import './App.css';
-import styled from 'styled-components';
-import tw from 'twin.macro';
+
+import React from 'react';
 
 import Routes from 'Routes';
 
-const Container = styled.div`
-	${tw`
-  text-orange-900
-  font-extrabold
-  text-3xl
-  `};
-`;
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+const queryClient = new QueryClient();
 
 const App: React.FC = () => {
 	return (
-		<Container>
+		<QueryClientProvider client={queryClient}>
 			<Routes />
-		</Container>
+		</QueryClientProvider>
 	);
 };
 
