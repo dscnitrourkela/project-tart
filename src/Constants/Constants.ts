@@ -1,40 +1,22 @@
-export const NavListItems = [
-	{
-		index: 1,
-		src: '#',
-		name: 'Events',
-	},
-	{
-		index: 2,
-		src: '#',
-		name: 'Events',
-	},
-	{
-		index: 3,
-		src: '#',
-		name: 'Events',
-	},
-];
-
 export const FAQs = [
 	{
 		question: 'What is Innovision?',
 		answer: 'Innovision is a fest',
 	},
 	{
-		question: 'What is Innovision1?',
+		question: 'What is Innovision?',
 		answer: 'Innovision is a fest',
 	},
 	{
-		question: 'What is Innovision2?',
+		question: 'What is Innovision?',
 		answer: 'Innovision is a fest',
 	},
 	{
-		question: 'What is Innovision3?',
+		question: 'What is Innovision?',
 		answer: 'Innovision is a fest',
 	},
 	{
-		question: 'What is Innovision4?',
+		question: 'What is Innovision?',
 		answer: 'Innovision is a fest',
 	},
 ];
