@@ -8,6 +8,7 @@ import { NavListItems } from 'Constants/Constants';
 
 const Wrapper = styled.header`
 	box-shadow: 0px 2px 20px rgba(65, 65, 65, 0.1);
+	background: rgb(255, 255, 255, 0.7);
 	backdrop-filter: blur(10px);
 
 	${tw`
@@ -19,11 +20,11 @@ const Wrapper = styled.header`
 	pl-[6.83px]
 	md:h-[80px]
 	h-[40px]
-	fixed
+	sticky
+	top-0
 	z-[1]
 	w-full
 	overflow-hidden
-	bg-background-secondary
  `};
 `;
 

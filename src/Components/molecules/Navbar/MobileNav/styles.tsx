@@ -1,8 +1,9 @@
+import { Body2 } from 'Components/atoms';
 import styled, { keyframes } from 'styled-components';
-import { Body2, Button, NavText } from 'Components/atoms';
-import { MobileNavProps } from './types';
 import tw from 'twin.macro';
+
 import { NavItem } from '../styles';
+import { MobileNavProps } from './types';
 
 const fadeDown = keyframes`
     0% {
@@ -16,10 +17,11 @@ const fadeDown = keyframes`
 `;
 
 export const NavBar = styled.header<MobileNavProps>`
-	background: #ffffff;
 	box-shadow: 0px 2px 20px rgba(65, 65, 65, 0.1);
+	background: rgb(255, 255, 255, 0.7);
 	backdrop-filter: blur(10px);
-	position: fixed;
+	position: sticky;
+	top: 0;
 	z-index: 1;
 	display: none;
 	flex-direction: column;

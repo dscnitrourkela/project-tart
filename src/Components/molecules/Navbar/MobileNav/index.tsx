@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
-import { NavListItems } from 'Constants/Constants';
-import { Logo, MenuButton, NavBar } from './styles';
+
+import { LogoImage, LogoText, LogoWrapper } from '../styles';
 import MobileNavList from './MobileNavList/MobileNavList';
-import { LogoText } from '../styles';
-import { LogoWrapper, LogoImage } from '../styles';
-const newScrollObject = () => {
-	// eslint-disable-next-line
-	const SmoothScroll = require('smooth-scroll');
-	return new SmoothScroll('', {
-		offset: () => 690,
-	});
-};
+// import { NavListItems } from 'Constants/Constants';
+import { MenuButton, NavBar } from './styles';
+
+// const newScrollObject = () => {
+// 	// eslint-disable-next-line
+// 	const SmoothScroll = require('smooth-scroll');
+// 	return new SmoothScroll('', {
+// 		offset: () => 690,
+// 	});
+// };
 
 //   const handleScroll = (id) => {
 //     if (typeof window !== 'undefined' && id) {
@@ -23,7 +24,7 @@ const newScrollObject = () => {
 //     }
 //   };
 
-function MobileNav() {
+const MobileNav: React.FC = () => {
 	const [menuIsOpen, setMenuIsOpen] = useState(false);
 
 	const toggleMenuIsOpen = () => (menuIsOpen ? setMenuIsOpen(false) : setMenuIsOpen(true));
@@ -60,6 +61,6 @@ function MobileNav() {
 			{menuIsOpen && <MobileNavList handleMenuClick={handleMenuClick} />}
 		</NavBar>
 	);
-}
+};
 
 export default MobileNav;
