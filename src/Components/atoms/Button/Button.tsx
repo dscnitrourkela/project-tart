@@ -7,6 +7,9 @@ import tw from 'twin.macro';
 import { ButtonProps, StyleProps } from './types';
 
 const Wrapper = styled.button<StyleProps>`
+	display: flex;
+	justify-content: center;
+	width: fit-content;
 	border-color: ${(props) => (props.success ? '#5BDB8E' : 'transparent')};
 	border-style: solid;
 	border-width: 2px;
