@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { Body1, Body2, Button, Caption, Heading1, Heading2, Heading3, Heading4, NavText } from 'Components/atoms';
-import { Footer } from 'Components/molecules';
-import { Navbar } from 'Components/molecules/Navbar';
+import { Footer, Navbar } from 'Components/molecules';
 
 const Playground: React.FC = () => {
 	return (

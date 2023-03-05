@@ -20,5 +20,6 @@ export const Container = styled.div<{ isModalOpen: boolean }>`
 export const ShowsWrapper = styled.div`
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 	gap: 36px 24px;
 `;
