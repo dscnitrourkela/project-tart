@@ -1,22 +1,16 @@
 import React from 'react';
 
-import { Footer, Navbar } from 'Components/molecules';
-import styled from 'styled-components';
-import tw from 'twin.macro';
+import { About, FAQSection } from 'Components/molecules';
 
-const Wrapper = styled.div`
-	${tw`
- h-60
- `};
-`;
+// import styled from 'styled-components';
+// import tw from 'twin.macro';
 
 const Home: React.FC = () => {
 	return (
-		<Wrapper>
-			<Navbar />
-			<h1>Homepage</h1>
-			<Footer />
-		</Wrapper>
+		<>
+			<About />
+			<FAQSection />
+		</>
 	);
 };
 
