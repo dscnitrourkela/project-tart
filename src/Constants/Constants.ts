@@ -1,5 +1,3 @@
-export const FAQs = [];
-
 export const NavListItems = [
 	{
 		index: 1,
@@ -24,19 +22,19 @@ export const FAQs = [
 		answer: 'Innovision is a fest',
 	},
 	{
-		question: 'What is Innovision?',
+		question: 'What is Innovision1?',
 		answer: 'Innovision is a fest',
 	},
 	{
-		question: 'What is Innovision?',
+		question: 'What is Innovision2?',
 		answer: 'Innovision is a fest',
 	},
 	{
-		question: 'What is Innovision?',
+		question: 'What is Innovision3?',
 		answer: 'Innovision is a fest',
 	},
 	{
-		question: 'What is Innovision?',
+		question: 'What is Innovision4?',
 		answer: 'Innovision is a fest',
 	},
 ];
@@ -66,4 +64,3 @@ export const footer = {
 
 	CopyRight: 'Designed and Developed with 💙 by GDSC NIT, Rourkela',
 };
-

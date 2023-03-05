@@ -1,8 +1,9 @@
+import { Body2 } from 'Components/atoms';
 import styled, { keyframes } from 'styled-components';
-import { Body2, Button, NavText } from 'Components/atoms';
-import { MobileNavProps } from './types';
 import tw from 'twin.macro';
+
 import { NavItem } from '../styles';
+import { MobileNavProps } from './types';
 
 const fadeDown = keyframes`
     0% {

@@ -1,15 +1,15 @@
 import React from 'react';
+
+import { Body1, Button } from 'Components/atoms';
 import { NavListItems } from 'Constants/Constants';
-import { MobileNavList } from '../styles';
-import { Button, Body1 } from 'Components/atoms';
-import { MobileViewList } from '../styles';
-import { MobileNavItem } from '../styles';
+
+import { MobileNavItem, MobileNavList, MobileViewList } from '../styles';
 
 type MobileNavProps = {
-	handleMenuClick: () => void;
+	handleMenuClick?: () => void;
 };
 
-function MobileNavListComp({ handleMenuClick }: MobileNavProps) {
+const MobileNavListComp: React.FC<MobileNavProps> = () => {
 	return (
 		<MobileViewList>
 			<MobileNavList>
@@ -26,6 +26,6 @@ function MobileNavListComp({ handleMenuClick }: MobileNavProps) {
 			</MobileNavList>
 		</MobileViewList>
 	);
-}
+};
 
 export default MobileNavListComp;
