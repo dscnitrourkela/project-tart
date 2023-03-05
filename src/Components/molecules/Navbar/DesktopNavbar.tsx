@@ -22,7 +22,7 @@ const Wrapper = styled.header`
 	h-[40px]
 	sticky
 	top-0
-	z-[1]
+	z-[500]
 	w-full
 	overflow-hidden
  `};
