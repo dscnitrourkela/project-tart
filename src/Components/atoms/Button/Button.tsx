@@ -28,6 +28,8 @@ const Wrapper = styled.button<StyleProps>`
     flex
     justify-center
     gap-6
+	justify-center
+	items-center
     px-[32px]
     py-[10px]
     sm:px-[48px]  
