@@ -17,6 +17,7 @@ export const LogoImage = styled.img`
 	${tw`
     h-[100%]
     my-auto
+    p-1
     `}
 `;
 export const LogoText = styled.p`
