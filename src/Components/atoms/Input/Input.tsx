@@ -1,10 +1,12 @@
 import React from 'react';
 
+import Caption from '../Typography/Caption';
 import { CustomInput, CustomSelect, Error, RegisterInput, RegisterLabel } from './styles';
 import { InputProps } from './types';
 
 const Input: React.FC<InputProps> = ({ objectKey, onBlur, onChange, values }) => {
-	const { placeholder, errorVisibility, errorMessage, value, readOnly, inputMode, options } = values[objectKey];
+	const { placeholder, errorVisibility, errorMessage, value, readOnly, inputMode, type, options, caption } =
+		values[objectKey];
 	const [focused, setFocused] = React.useState(false);
 
 	return (
@@ -26,13 +28,14 @@ const Input: React.FC<InputProps> = ({ objectKey, onBlur, onChange, values }) =>
 						</RegisterLabel>
 						<RegisterInput
 							id={objectKey}
-							type={inputMode}
+							type={type}
 							value={value}
 							onFocus={() => setFocused(true)}
 							onChange={onChange}
 							onBlur={onBlur}
 							required
 						/>
+						{caption && <Caption>{caption}</Caption>}
 						{errorVisibility && <Error>{errorMessage}</Error>}
 					</CustomInput>
 				</>

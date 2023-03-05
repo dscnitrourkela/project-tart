@@ -23,7 +23,7 @@ const RegistrationForm: React.FC = () => {
 
 	const onBlurInput = (e: React.FocusEvent<HTMLInputElement | HTMLSelectElement>) => {
 		const { id, value } = e.target;
-		if (value.length < (values as valueProps)[id].minLength && value.length !== 0) {
+		if (value.length < ((values as valueProps)[id].minLength ?? 0) && value.length !== 0) {
 			setValues((prev) => ({
 				...prev,
 				[id]: {
@@ -31,6 +31,16 @@ const RegistrationForm: React.FC = () => {
 					value,
 					errorVisibility: true,
 					errorMessage: `Minimum ${(values as valueProps)[id].minLength} characters required`,
+				},
+			}));
+		} else {
+			setValues((prev) => ({
+				...prev,
+				[id]: {
+					...(prev as valueProps)[id],
+					value,
+					errorVisibility: false,
+					errorMessage: '',
 				},
 			}));
 		}

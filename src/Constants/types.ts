@@ -28,10 +28,11 @@ export interface valueProps {
 		inputMode: string;
 		key: string;
 		show: string;
-		maxLength: number;
-		minLength: number;
-		errorVisibility: boolean;
-		errorMessage: string;
+		maxLength?: number;
+		minLength?: number;
+		errorVisibility?: boolean;
+		errorMessage?: string;
 		options?: string[];
+		caption?: string;
 	};
 }

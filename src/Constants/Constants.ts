@@ -165,7 +165,7 @@ export const INPUTS = ({
 		value: mobile,
 		placeholder: 'Mobile Number (10 digits)',
 		readOnly: false,
-		type: 'text',
+		type: 'number',
 		inputMode: 'number',
 		key: 'mobile',
 		show: 'both',
@@ -245,6 +245,16 @@ export const INPUTS = ({
 		show: 'nitr',
 		maxLength: 9,
 		minLength: 9,
+	},
+	password: {
+		value: '',
+		placeholder: 'Zimbra Password',
+		readOnly: false,
+		type: 'password',
+		inputMode: 'text',
+		key: 'password',
+		show: 'nitr',
+		caption: 'Stay assured, we will not save your password.',
 	},
 });
 
