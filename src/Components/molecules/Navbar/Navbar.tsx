@@ -1,22 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
-import tw from 'twin.macro';
 
-import { Button } from 'Components/atoms';
+import useMediaQuery from 'Hooks/useMediaQuery';
 
-const Wrapper = styled.div`
-	${tw`
- h-60
- `};
-`;
+import DesktopNavbar from './DesktopNavbar';
+import MobileNav from './MobileNav';
 
 const Navbar: React.FC = () => {
-	return (
-		<Wrapper>
-			<h1>Navbar</h1>
-			<Button btnText="Nav Button" />
-		</Wrapper>
-	);
+	const isMobileView = useMediaQuery('(max-width: 969px)');
+
+	return isMobileView ? <MobileNav /> : <DesktopNavbar />;
 };
 
 export default Navbar;
