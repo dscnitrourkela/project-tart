@@ -30,6 +30,7 @@ export const NavBar = styled.header<MobileNavProps>`
 	.mobileNavWrapper {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 		padding: 0 12px;
 	}
 
