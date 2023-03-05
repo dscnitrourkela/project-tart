@@ -1,8 +1,7 @@
 import React from 'react';
-import { Heading2 } from 'Components/atoms';
 
 import TickerItem from './TickerItem';
-import { TickerContainer, TickerMover, ItemContainer } from './styles';
+import { TickerContainer, TickerMover } from './styles';
 
 const Ticker: React.FC = () => {
 	return (
