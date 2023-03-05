@@ -4,6 +4,7 @@ import { Body1, Body2, Button, Caption, Heading1, Heading2, Heading3, Heading4, 
 import { About, FAQSection, HeroSection, Ticker } from 'Components/molecules';
 import { Navbar } from 'Components/molecules/Navbar';
 import { Footer } from 'Components/molecules';
+import ProfileSection from 'Components/molecules/ProfileSection/ProfileSection';
 
 const Playground: React.FC = () => {
 	return (
@@ -18,6 +19,8 @@ const Playground: React.FC = () => {
 			<Body2>Body 2</Body2>
 			<Caption>Caption</Caption>
 			<NavText>Nav</NavText>
+			<ProfileSection />
+
 			<div>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum in inventore provident, magnam suscipit
