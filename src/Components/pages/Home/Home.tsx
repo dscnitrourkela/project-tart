@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { About, FAQSection, HeroSection, Ticker } from 'Components/molecules';
+import { About, EventSection, FAQSection, HeroSection, Ticker } from 'Components/molecules';
 
 const Home: React.FC = () => {
 	return (
@@ -8,6 +8,7 @@ const Home: React.FC = () => {
 			<HeroSection />
 			<Ticker />
 			<About />
+			<EventSection />
 			<FAQSection />
 		</>
 	);
