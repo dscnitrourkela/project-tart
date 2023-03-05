@@ -5,6 +5,7 @@ export default styled.p`
 	font-weight: 500;
 	${tw`
       text-inherit
+      cursor-pointer
 
       text-sm
       leading-5
