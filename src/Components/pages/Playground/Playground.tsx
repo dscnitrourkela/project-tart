@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { Body1, Body2, Button, Caption, Heading1, Heading2, Heading3, Heading4, NavText } from 'Components/atoms';
-import { About, FAQSection, HeroSection } from 'Components/molecules';
-import Ticker from 'Components/molecules/HeroSection/Ticker';
+import { About, FAQSection, HeroSection, Ticker } from 'Components/molecules';
 
 const Playground: React.FC = () => {
 	return (
