@@ -28,8 +28,7 @@ const Wrapper = styled.button<StyleProps>`
     flex
     justify-center
     gap-6
-	justify-center
-	items-center
+	  items-center
     px-[32px]
     py-[10px]
     sm:px-[48px]  
@@ -38,9 +37,15 @@ const Wrapper = styled.button<StyleProps>`
   `}
 `;
 
-const Button: React.FC<ButtonProps> = ({ btnText = 'button', filled = false, success = false, full = false }) => {
+const Button: React.FC<ButtonProps> = ({
+	btnText = 'button',
+	filled = false,
+	success = false,
+	full = false,
+	onClick,
+}) => {
 	return (
-		<Wrapper filled={filled} success={success} full={full}>
+		<Wrapper filled={filled} success={success} full={full} onClick={onClick}>
 			<ButtonText>{btnText}</ButtonText>
 			{success && <img src="tick.svg" />}
 		</Wrapper>

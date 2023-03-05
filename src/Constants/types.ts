@@ -18,3 +18,20 @@ export interface EventData {
 	description?: string;
 	image?: string;
 }
+
+export interface valueProps {
+	[key: string]: {
+		value: string;
+		placeholder: string;
+		readOnly: boolean;
+		type: string;
+		inputMode: string;
+		key: string;
+		show: string;
+		maxLength: number;
+		minLength: number;
+		errorVisibility: boolean;
+		errorMessage: string;
+		options?: string[];
+	};
+}

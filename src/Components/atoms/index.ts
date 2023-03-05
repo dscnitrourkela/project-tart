@@ -1,4 +1,5 @@
 export { default as Button } from './Button/Button';
+export { default as Input } from './Register/Input';
 
 export { default as Heading1 } from './Typography/Heading1';
 export { default as Heading2 } from './Typography/Heading2';

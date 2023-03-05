@@ -9,4 +9,5 @@ export interface ButtonProps {
 	filled?: boolean;
 	success?: boolean;
 	full?: boolean;
+	onClick?: () => void;
 }
