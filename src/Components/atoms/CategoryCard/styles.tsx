@@ -1,18 +1,39 @@
 import styled from 'styled-components';
 import tw from 'twin.macro';
+
 import Body2 from '../Typography/Body2';
 import Heading3 from '../Typography/Heading3';
 
+export const PopImage = styled.img`
+	position: absolute;
+	left: 10%;
+	top: 0%;
+	transition: transform 250ms;
+
+	&:hover {
+	}
+
+	${tw`
+	mx-auto
+	h-64
+	w-96
+`}
+`;
+
 export const Container = styled.div`
-	height: 580px;
+	height: 500px;
 	${tw`
 	flex
 	flex-col
 	justify-end
-    rounded
-    bg-background-secondary
+	rounded
+	bg-background-secondary
 	max-w-lg
+	cursor-pointer
 `}
+	&:hover ${PopImage} {
+		transform: translateY(-250px);
+	}
 `;
 
 export const Description = styled(Body2)`
@@ -62,16 +83,6 @@ export const Clapdown = styled.div`
 `}
 `;
 
-export const PopImage = styled.img`
-	${tw`
-	hidden
-	mx-auto
-	h-64
-	w-96
-	group-hover:block
-`}
-`;
-
 export const Link = styled.span`
 	${tw`
 	flex
@@ -80,6 +91,7 @@ export const Link = styled.span`
 	items-center
 	mt-6
 	gap-2
+	cursor-pointer
 `}
 `;
 export const ButtonText = styled(Heading3)`
