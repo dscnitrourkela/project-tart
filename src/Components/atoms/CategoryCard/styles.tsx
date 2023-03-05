@@ -21,7 +21,7 @@ export const PopImage = styled.img`
 `;
 
 export const Container = styled.div`
-	height: 500px;
+	height: 600px;
 	${tw`
 	flex
 	flex-col
