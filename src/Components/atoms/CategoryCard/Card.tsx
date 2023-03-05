@@ -13,6 +13,7 @@ import {
 	PopImage,
 	Rotor,
 	UpSpan,
+	DescriptionBox,
 } from './styles';
 
 const Card: React.FC = () => {
@@ -36,15 +37,17 @@ const Card: React.FC = () => {
 						))}
 				</Clapdown>
 			</Clap>
-			<Description>
-				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere voluptas asperiores neque reprehenderit earum
-				in, vero soluta officiis dolore eaque cum ipsam ut, architecto, magnam iste illo. Iure vitae ipsa repellendus
-				quos.
-			</Description>
-			<Link>
-				<ButtonText>Proshows</ButtonText>
-				<ButtonIcon width="4%" height="auto" src="Vector.svg" />
-			</Link>
+			<DescriptionBox>
+				<Description>
+					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere voluptas asperiores neque reprehenderit earum
+					in, vero soluta officiis dolore eaque cum ipsam ut, architecto, magnam iste illo. Iure vitae ipsa repellendus
+					quos.
+				</Description>
+				<Link>
+					<ButtonText>Proshows</ButtonText>
+					<ButtonIcon width="4%" height="auto" src="Vector.svg" />
+				</Link>
+			</DescriptionBox>
 		</Container>
 	);
 };
