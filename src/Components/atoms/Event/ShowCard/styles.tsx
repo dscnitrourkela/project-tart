@@ -1,3 +1,4 @@
+import Heading3 from 'Components/atoms/Typography/Heading3';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 
@@ -9,6 +10,8 @@ export const Container = styled.div`
     border-[1px]
 		border-brand-left
 		rounded-[8px]
+    flex
+    flex-col
   `}
 `;
 
@@ -16,13 +19,12 @@ export const TopCard = styled.div`
 	${tw`
 		flex
 		flex-col
+    grow-[1]
 		items-center
 		relative
     px-10
     pt-3
     pb-4
-    h-[364px]
-    sm:h-[460px]
     sm:px-[42px]
     sm:py-6
   `}
@@ -33,6 +35,7 @@ export const BottomCard = styled.div`
 	${tw`
 		flex
 		flex-col
+    grow-0
 		items-center
 		gap-3
     px-5
@@ -72,7 +75,8 @@ export const Circle2 = styled(Circle)`
 
 export const Poster = styled.img`
 	${tw`
-		mb-2
+		mb-auto
+    pb-2
 	`}
 `;
 
@@ -83,4 +87,12 @@ export const Venue = styled.div`
 		w-full
 		justify-between
 	`}
+`;
+
+export const Title = styled(Heading3)`
+	${tw`
+    max-w-[300px]
+    sm:max-w-[350px]
+    truncate
+  `}
 `;

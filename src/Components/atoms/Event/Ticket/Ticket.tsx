@@ -1,8 +1,20 @@
 import React from 'react';
 
-import { Body1, Body2, Button, Caption, Heading3, Heading4 } from 'Components/atoms/';
+import { Body1, Body2, Button, Caption, Heading4 } from 'Components/atoms/';
 
-import { Circle1, Circle2, Close, Container, Description, Head, Heading, LeftCard, Poster, RightCard } from './styles';
+import {
+	Circle1,
+	Circle2,
+	Close,
+	Container,
+	Description,
+	Head,
+	Heading,
+	LeftCard,
+	Poster,
+	RightCard,
+	Title,
+} from './styles';
 import { TicketProps } from './types';
 
 const Ticket: React.FC<{ data: TicketProps; onClick: () => void }> = ({ data, onClick }) => {
@@ -28,7 +40,7 @@ const Ticket: React.FC<{ data: TicketProps; onClick: () => void }> = ({ data, on
 				<Head>
 					<Poster src={poster} />
 					<div>
-						<Heading3 bold>{title}</Heading3>
+						<Title bold>{title}</Title>
 						<Caption bold>{club}</Caption>
 					</div>
 				</Head>

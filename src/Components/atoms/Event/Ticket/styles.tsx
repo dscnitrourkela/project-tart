@@ -118,6 +118,7 @@ export const Head = styled.div`
 	${tw`
     flex
     gap-4
+    truncate
   `}
 `;
 
@@ -145,4 +146,12 @@ export const Close = styled.img`
     w-5
   `}
 	transform: translate(-50%, -50%);
+`;
+
+export const Title = styled(Heading4)`
+	${tw`
+    truncate
+    max-w-[210px]
+    sm:max-w-[250px]
+  `}
 `;

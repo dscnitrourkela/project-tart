@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Body1, Body2, Button, ButtonText, Heading3 } from 'Components/atoms';
+import { Body1, Body2, Button, ButtonText } from 'Components/atoms';
 
-import { BottomCard, Circle1, Circle2, Container, Poster, TopCard, Venue } from './styles';
+import { BottomCard, Circle1, Circle2, Container, Poster, Title, TopCard, Venue } from './styles';
 import { CardProps } from './types';
 
 const ShowCard: React.FC<{ data: CardProps; onClick: () => void }> = ({ data, onClick }) => {
@@ -12,7 +12,7 @@ const ShowCard: React.FC<{ data: CardProps; onClick: () => void }> = ({ data, on
 		<Container>
 			<TopCard>
 				<Poster src={poster} />
-				<Heading3 bold>{title}</Heading3>
+				<Title bold>{title}</Title>
 				<Body2 bold>{club}</Body2>
 				<Venue>
 					<Body1 bold>
