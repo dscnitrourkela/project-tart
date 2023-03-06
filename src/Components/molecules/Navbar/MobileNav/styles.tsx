@@ -22,7 +22,7 @@ export const NavBar = styled.header<MobileNavProps>`
 	backdrop-filter: blur(10px);
 	position: sticky;
 	top: 0;
-	z-index: 1;
+	z-index: 500;
 	display: none;
 	flex-direction: column;
 	width: 100%;
