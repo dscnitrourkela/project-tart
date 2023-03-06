@@ -6,7 +6,7 @@ import { InputProps } from './types';
 
 const Input: React.FC<InputProps> = ({ objectKey, onBlur, onChange, values }) => {
 	const { placeholder, errorVisibility, errorMessage, value, inputMode, type, options, caption } = values[objectKey];
-	const [focused, setFocused] = React.useState(false);
+	const [focused, setFocused] = React.useState(value ? true : false);
 
 	return (
 		<>
