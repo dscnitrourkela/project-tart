@@ -45,7 +45,7 @@ export const PrimaryContainer = styled.div`
     md:justify-start
     lg:flex-row 
     md:items-start 
-    md:gap-2
+    gap-2
     lg:gap-20
     `};
 `;
@@ -60,16 +60,30 @@ export const SecondaryContainer = styled.div`
     `};
 `;
 
+export const EventWrapper = styled.div`
+	${tw`
+flex
+flex-col
+md:w-[270px]
+content-center
+gap-4
+`}
+`;
 export const LogoWrapper = styled.div`
 	${tw`
 	flex
     flex-wrap
 	flex-row
     items-center 
-    justify-between 
     gap-2
-    mb-6
+    mx-auto
  `};
+`;
+
+export const EventText = styled.div`
+	${tw`
+    pl-2
+`}
 `;
 
 export const ContentWrapper = styled.div`

@@ -136,18 +136,29 @@ export const Heading = styled(Heading4)`
   `}
 `;
 
-export const Close = styled.img`
+export const Close = styled.div`
 	${tw`
+    rounded-[50%]
+    bg-[#3D3D3D]
     cursor-pointer
     absolute
     top-0
     left-0
     h-5
     w-5
+    hover:bg-red-700
   `}
 	transform: translate(-50%, -50%);
 `;
 
+export const X = styled.p`
+	${tw`
+text-[#FFFFFF]
+text-center
+content-center
+text-sm
+`}
+`;
 export const Title = styled(Heading4)`
 	${tw`
     truncate

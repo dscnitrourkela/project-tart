@@ -15,6 +15,8 @@ import {
 	Span,
 	A,
 	Wrapper,
+	EventWrapper,
+	EventText,
 } from './styles';
 
 const Footer: React.FC = () => {
@@ -23,10 +25,15 @@ const Footer: React.FC = () => {
 			<Container>
 				<FooterWrapper>
 					<PrimaryContainer>
-						<LogoWrapper>
-							<Logo src="NU_Logo.svg" alt={footer.Logo.alt} />
-							<Body2 bold>{footer.Logo.title}</Body2>
-						</LogoWrapper>
+						<EventWrapper>
+							<LogoWrapper>
+								<Logo src="NU_Logo.svg" alt={footer.Logo.alt} />
+								<Body2 bold>{footer.Logo.title}</Body2>
+							</LogoWrapper>
+							<EventText>
+								<Body2>{footer.Logo.about}</Body2>
+							</EventText>
+						</EventWrapper>
 
 						<ContentWrapper>
 							<Body1 bold style={{ marginBottom: '1em' }}>

@@ -56,6 +56,8 @@ export const footer = {
 	Logo: {
 		title: 'NITRUTSAV 2023',
 		alt: 'logo',
+		about:
+			'INNOVISION, one of the largest techno-management fest in eastern India, aims at providing a stage for young budding minds to exhibit their talents. Our primary goal is to create awareness for great ideas that would help humanity and society.',
 	},
 	ImpLinks: {
 		title: 'Quick Links',

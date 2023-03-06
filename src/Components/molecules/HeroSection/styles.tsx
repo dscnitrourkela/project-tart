@@ -36,7 +36,7 @@ export const ButtonWrapper = styled.div`
     mt-16
     gap-4
     md:mt-8
-    md:gap-20
+    md:gap-6
     md:flex-row
  `};
 `;

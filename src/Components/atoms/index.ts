@@ -10,3 +10,4 @@ export { default as Body2 } from './Typography/Body2';
 export { default as ButtonText } from './Typography/ButtonText';
 export { default as Caption } from './Typography/Caption';
 export { default as NavText } from './Typography/NavText';
+export { default as SVGIcon } from './SVGIcon';

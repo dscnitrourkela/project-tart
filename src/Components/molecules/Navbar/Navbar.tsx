@@ -7,7 +7,6 @@ import MobileNav from './MobileNav';
 
 const Navbar: React.FC = () => {
 	const isMobileView = useMediaQuery('(max-width: 969px)');
-
 	return isMobileView ? <MobileNav /> : <DesktopNavbar />;
 };
 
