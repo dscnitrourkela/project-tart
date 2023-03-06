@@ -11,4 +11,5 @@ export interface ButtonProps {
 	success?: boolean;
 	full?: boolean;
 	fullWidth?: boolean;
+	onClick?: (e: any) => void;
 }
