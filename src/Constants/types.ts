@@ -37,7 +37,7 @@ export interface valueProps {
 	};
 }
 
-export interface inputProps {
+export interface userData {
 	name?: string;
 	email?: string;
 	mobile?: string;
