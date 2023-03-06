@@ -1,3 +1,5 @@
+import { inputProps, valueProps } from './types';
+
 export const NavListItems = [
 	{
 		index: 1,
@@ -119,378 +121,149 @@ export const Events = [
 	},
 ];
 
-export const EventsOLD = [
-	{
-		slugName: 'proshows',
-		title: 'Proshows',
-		description:
-			'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur',
-		image:
-			'https://res.cloudinary.com/dujqfyato/image/upload/v1677910284/TART/Marble_sculpture_of_historical_figure_with_medical_mask_haxidf.svg',
-		events: [
-			{
-				title: 'Mind Wars',
-				club: 'Lassan Club',
-				venue: 'SAC',
-				time: '10:00',
-				date: '17',
-				month: 'March',
-				prizes: '$12K',
-				description: [
-					{
-						id: 0,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 1,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 2,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 3,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 4,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 5,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 6,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-				],
-				poster: 'https://res.cloudinary.com/dujqfyato/image/upload/v1677924775/TART/Frame_586_ibkz1d.svg',
-			},
-			{
-				title: 'Mind Wars',
-				club: 'Lassan Club',
-				venue: 'SAC',
-				time: '10:00',
-				date: '17',
-				month: 'March',
-				prizes: '$12K',
-				description: [
-					{
-						id: 0,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 1,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 2,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 3,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 4,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 5,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 6,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-				],
-				poster: 'https://res.cloudinary.com/dujqfyato/image/upload/v1677924775/TART/Frame_586_ibkz1d.svg',
-			},
-			{
-				title: 'Mind Wars',
-				club: 'Lassan Club',
-				venue: 'SAC',
-				time: '10:00',
-				date: '17',
-				month: 'March',
-				prizes: '$12K',
-				description: [
-					{
-						id: 0,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 1,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 2,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 3,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 4,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 5,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 6,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-				],
-				poster: 'https://res.cloudinary.com/dujqfyato/image/upload/v1677924775/TART/Frame_586_ibkz1d.svg',
-			},
-			{
-				title: 'Mind Wars',
-				club: 'Lassan Club',
-				venue: 'SAC',
-				time: '10:00',
-				date: '17',
-				month: 'March',
-				prizes: '$12K',
-				description: [
-					{
-						id: 0,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 1,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 2,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 3,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 4,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 5,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 6,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-				],
-				poster: 'https://res.cloudinary.com/dujqfyato/image/upload/v1677924775/TART/Frame_586_ibkz1d.svg',
-			},
-			{
-				title: 'Mind Wars',
-				club: 'Lassan Club',
-				venue: 'SAC',
-				time: '10:00',
-				date: '17',
-				month: 'March',
-				prizes: '$12K',
-				description: [
-					{
-						id: 0,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 1,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 2,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 3,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 4,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 5,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 6,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-				],
-				poster: 'https://res.cloudinary.com/dujqfyato/image/upload/v1677924775/TART/Frame_586_ibkz1d.svg',
-			},
-			{
-				title: 'Mind Wars',
-				club: 'Lassan Club',
-				venue: 'SAC',
-				time: '10:00',
-				date: '17',
-				month: 'March',
-				prizes: '$12K',
-				description: [
-					{
-						id: 0,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 1,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 2,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 3,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 4,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 5,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 6,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-				],
-				poster: 'https://res.cloudinary.com/dujqfyato/image/upload/v1677924775/TART/Frame_586_ibkz1d.svg',
-			},
-			{
-				title: 'Mind Wars',
-				club: 'Lassan Club',
-				venue: 'SAC',
-				time: '10:00',
-				date: '17',
-				month: 'March',
-				prizes: '$12K',
-				description: [
-					{
-						id: 0,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 1,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 2,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 3,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 4,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 5,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 6,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-				],
-				poster: 'https://res.cloudinary.com/dujqfyato/image/upload/v1677924775/TART/Frame_586_ibkz1d.svg',
-			},
-			{
-				title: 'Mind Wars',
-				club: 'Lassan Club',
-				venue: 'SAC',
-				time: '10:00',
-				date: '17',
-				month: 'March',
-				prizes: '$12K',
-				description: [
-					{
-						id: 0,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 1,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 2,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 3,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 4,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 5,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 6,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-				],
-				poster: 'https://res.cloudinary.com/dujqfyato/image/upload/v1677924775/TART/Frame_586_ibkz1d.svg',
-			},
-			{
-				title: 'Mind Wars',
-				club: 'Lassan Club',
-				venue: 'SAC',
-				time: '10:00',
-				date: '17',
-				month: 'March',
-				prizes: '$12K',
-				description: [
-					{
-						id: 0,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 1,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 2,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 3,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 4,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 5,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-					{
-						id: 6,
-						desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus magna, finibus viverra lacinia elementum, ',
-					},
-				],
-				poster: 'https://res.cloudinary.com/dujqfyato/image/upload/v1677924775/TART/Frame_586_ibkz1d.svg',
-			},
-		],
+export const INIT_STATE = {
+	value: '',
+	errorVisibility: false,
+	errorMessage: '',
+};
+
+export const INPUTS: (arg0: inputProps) => valueProps = ({
+	name = '',
+	email = '',
+	mobile = '',
+	gender = '',
+	state = '',
+	city = '',
+	college = '',
+	stream = '',
+	rollNumber = '',
+}): valueProps => ({
+	name: {
+		...INIT_STATE,
+		value: name,
+		placeholder: 'Name',
+		readOnly: false,
+		type: 'text',
+		inputMode: 'text',
+		key: 'name',
+		show: 'both',
+		maxLength: 50,
+		minLength: 1,
 	},
-];
+	email: {
+		...INIT_STATE,
+		value: email,
+		placeholder: 'Email (same as your gmail)',
+		readOnly: true,
+		type: 'text',
+		inputMode: 'email',
+		key: 'email',
+		show: 'both',
+		maxLength: 50,
+		minLength: 1,
+	},
+	mobile: {
+		...INIT_STATE,
+		value: mobile,
+		placeholder: 'Mobile Number (10 digits)',
+		readOnly: false,
+		type: 'number',
+		inputMode: 'number',
+		key: 'mobile',
+		show: 'both',
+		maxLength: 10,
+		minLength: 10,
+	},
+	gender: {
+		...INIT_STATE,
+		value: gender,
+		placeholder: 'Gender',
+		readOnly: false,
+		type: 'select',
+		inputMode: 'select',
+		key: 'gender',
+		show: 'both',
+		options: ['Male', 'Female', 'Prefer not to say'],
+		maxLength: 50,
+		minLength: 1,
+	},
+	state: {
+		...INIT_STATE,
+		value: state,
+		placeholder: 'State',
+		readOnly: false,
+		type: 'text',
+		inputMode: 'text',
+		key: 'state',
+		show: 'non-nitr',
+		maxLength: 50,
+		minLength: 1,
+	},
+	city: {
+		...INIT_STATE,
+		value: city,
+		placeholder: 'City',
+		readOnly: false,
+		type: 'text',
+		inputMode: 'text',
+		key: 'city',
+		show: 'non-nitr',
+		maxLength: 50,
+		minLength: 1,
+	},
+	college: {
+		...INIT_STATE,
+		value: college,
+		placeholder: 'College',
+		readOnly: false,
+		type: 'text',
+		inputMode: 'text',
+		key: 'college',
+		show: 'non-nitr',
+		maxLength: 50,
+		minLength: 1,
+	},
+	stream: {
+		...INIT_STATE,
+		value: stream,
+		placeholder: 'Stream',
+		readOnly: false,
+		type: 'text',
+		inputMode: 'text',
+		key: 'stream',
+		show: 'both',
+		maxLength: 50,
+		minLength: 1,
+	},
+	rollNumber: {
+		...INIT_STATE,
+		value: rollNumber,
+		placeholder: 'Roll Number',
+		readOnly: false,
+		type: 'text',
+		inputMode: 'text',
+		key: 'rollNumber',
+		show: 'nitr',
+		maxLength: 9,
+		minLength: 9,
+	},
+	password: {
+		value: '',
+		placeholder: 'Zimbra Password',
+		readOnly: false,
+		type: 'password',
+		inputMode: 'text',
+		key: 'password',
+		show: 'nitr',
+		caption: 'Stay assured, we will not save your password.',
+	},
+});
+
+export const STAGES = {
+	TYPE_OF_USER: 'Are you an NITR Student?',
+	NITR_STUDENT_FORM: 'NITR Student Register',
+	NON_NITR_STUDENT_FORM: 'Register',
+};
 
 export const RegisteredEventExample = {
 	id: '6360ceec1c74891efe6bed48',

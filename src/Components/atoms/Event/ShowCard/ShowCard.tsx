@@ -24,7 +24,7 @@ const ShowCard: React.FC<{ data: CardProps; onClick: () => void }> = ({ data, on
 				<Circle2 />
 			</TopCard>
 			<BottomCard>
-				<Button btnText="Book Slots" full />
+				<Button btnText="Book Slots" fullWidth />
 				<ButtonText onClick={onClick}>Know More</ButtonText>
 			</BottomCard>
 		</Container>

@@ -13,13 +13,15 @@ const Wrapper = styled.button<StyleProps>`
 	border-color: ${(props) => (props.success ? '#5BDB8E' : 'transparent')};
 	border-style: solid;
 	border-width: 2px;
-	cursor: pointer;
+	cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
 	background: ${(props) =>
-		props.filled
-			? !props.success
-				? 'linear-gradient(81.68deg, #6B014E -4.79%, #03016B 103.83%)'
-				: '#FFFFFF'
-			: ' linear-gradient(#F1F0F9, #F1F0F9) padding-box, linear-gradient(81.68deg, #6B014E -4.79%, #03016B 103.83%) border-box'};
+		!props.disabled
+			? props.filled
+				? !props.success
+					? 'linear-gradient(81.68deg, #6B014E -4.79%, #03016B 103.83%)'
+					: '#FFFFFF'
+				: ' linear-gradient(#F1F0F9, #F1F0F9) padding-box, linear-gradient(81.68deg, #6B014E -4.79%, #03016B 103.83%) border-box'
+			: '#e5e5e5a7'};
 	color: ${(props) =>
 		props.filled
 			? props.success
@@ -30,8 +32,7 @@ const Wrapper = styled.button<StyleProps>`
     flex
     justify-center
     gap-6
-	justify-center
-	items-center
+	  items-center
     px-[32px]
     py-[10px]
     sm:px-[48px]  
@@ -44,13 +45,21 @@ const Button: React.FC<ButtonProps> = ({
 	btnText = 'button',
 	filled = false,
 	success = false,
-	full = false,
 	fullWidth = false,
+	disabled = false,
 	onClick,
 }) => {
 	return (
-		<Wrapper onClick={onClick} filled={filled} success={success} full={full} fullWidth={fullWidth}>
-			<ButtonText>{btnText}</ButtonText>
+		<Wrapper
+			filled={filled}
+			success={success}
+			fullWidth={fullWidth}
+			onClick={onClick}
+			aria-disabled={disabled}
+			disabled={disabled}>
+			<ButtonText aria-disabled={disabled} disabled={disabled}>
+				{btnText}
+			</ButtonText>
 			{success && <img src="tick.svg" />}
 		</Wrapper>
 	);

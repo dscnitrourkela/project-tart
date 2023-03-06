@@ -9,7 +9,7 @@ export interface ButtonProps {
 	btnText: string;
 	filled?: boolean;
 	success?: boolean;
-	full?: boolean;
+	onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 	fullWidth?: boolean;
-	onClick?: (e: any) => void;
+	disabled?: boolean;
 }
