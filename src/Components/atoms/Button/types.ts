@@ -2,6 +2,7 @@ export interface StyleProps {
 	filled?: boolean;
 	success?: boolean;
 	full?: boolean;
+	fullWidth?: boolean;
 }
 
 export interface ButtonProps {
@@ -9,4 +10,5 @@ export interface ButtonProps {
 	filled?: boolean;
 	success?: boolean;
 	full?: boolean;
+	fullWidth?: boolean;
 }
