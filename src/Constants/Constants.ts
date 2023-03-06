@@ -1,3 +1,5 @@
+import { valueProps } from './types';
+
 export const NavListItems = [
 	{
 		index: 1,
@@ -135,7 +137,7 @@ export const INPUTS = ({
 	college = '',
 	stream = '',
 	rollNumber = '',
-}) => ({
+}): valueProps => ({
 	name: {
 		...INIT_STATE,
 		value: name,
@@ -179,7 +181,6 @@ export const INPUTS = ({
 		readOnly: false,
 		type: 'select',
 		inputMode: 'select',
-		regex: '',
 		key: 'gender',
 		show: 'both',
 		options: ['Male', 'Female', 'Prefer not to say'],

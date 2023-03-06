@@ -76,7 +76,7 @@ const RegistrationForm: React.FC = () => {
 						<ButtonContainer margin="2rem">
 							<Button filled btnText="Back" onClick={() => setStage(STAGES.TYPE_OF_USER)} />
 							<Button btnText="Verify" />
-							<Button filled btnText="Register" onClick={() => console.log(values)} />
+							<Button filled btnText="Register" />
 						</ButtonContainer>
 					</>
 				);
@@ -96,7 +96,7 @@ const RegistrationForm: React.FC = () => {
 						</Wrapper>
 						<ButtonContainer margin="2rem">
 							<Button btnText="Back" onClick={() => setStage(STAGES.TYPE_OF_USER)} />
-							<Button filled btnText="Register" onClick={() => console.log(values)} />
+							<Button filled btnText="Register" />
 						</ButtonContainer>
 					</>
 				);

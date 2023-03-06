@@ -5,8 +5,7 @@ import { CustomInput, CustomSelect, Error, RegisterInput, RegisterLabel } from '
 import { InputProps } from './types';
 
 const Input: React.FC<InputProps> = ({ objectKey, onBlur, onChange, values }) => {
-	const { placeholder, errorVisibility, errorMessage, value, readOnly, inputMode, type, options, caption } =
-		values[objectKey];
+	const { placeholder, errorVisibility, errorMessage, value, inputMode, type, options, caption } = values[objectKey];
 	const [focused, setFocused] = React.useState(false);
 
 	return (
