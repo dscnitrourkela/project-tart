@@ -47,7 +47,7 @@ const MobileNav: React.FC = () => {
 							src="https://res.cloudinary.com/dme9vltjf/image/upload/v1677841432/NITRUtsav/Mask_group_yulpep.svg"
 							alt="NU"
 						/>
-						<LogoText>NITRUTSAV 2K23</LogoText>
+						<LogoText>NITRUTSAV 2023</LogoText>
 					</LogoWrapper>
 
 					<div className="btn__container">

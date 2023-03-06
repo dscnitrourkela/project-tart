@@ -46,9 +46,10 @@ const Button: React.FC<ButtonProps> = ({
 	success = false,
 	full = false,
 	fullWidth = false,
+	onClick,
 }) => {
 	return (
-		<Wrapper filled={filled} success={success} full={full} fullWidth={fullWidth}>
+		<Wrapper onClick={onClick} filled={filled} success={success} full={full} fullWidth={fullWidth}>
 			<ButtonText>{btnText}</ButtonText>
 			{success && <img src="tick.svg" />}
 		</Wrapper>
