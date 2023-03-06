@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 
 import { Footer, Navbar } from 'Components/molecules';
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const Homepage = React.lazy(() => import('Components/pages/Home'));
 const Playground = React.lazy(() => import('Components/pages/Playground'));
