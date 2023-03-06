@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { Button, Caption, Heading3, Input } from 'Components/atoms';
 import { INPUTS, STAGES } from 'Constants/Constants';
 import { valueProps } from 'Constants/types';
+import { avenueApi } from 'utils/api';
+import { AuthContext } from 'utils/AuthContext';
 
 import { ButtonContainer, Form, Wrapper } from './styles';
 
@@ -10,9 +12,35 @@ const RegistrationForm: React.FC = () => {
 	const [values, setValues] = React.useState(INPUTS({}));
 	const [stage, setStage] = React.useState(STAGES.TYPE_OF_USER);
 	const [verified, setVerified] = React.useState(false);
+	const { user } = React.useContext(AuthContext);
+
+	const setInputValue = (type: string, value = '') => {
+		setValues((prev) => ({
+			...prev,
+			[type]: {
+				...(prev as valueProps)[type],
+				value,
+			},
+		}));
+	};
 
 	const verifyZimbra = async () => {
-		setVerified(true);
+		const { password, rollNumber } = values;
+
+		try {
+			const { status } = await avenueApi.get('/zimbra-login', {
+				params: {
+					username: rollNumber.value,
+					password: password.value,
+				},
+			});
+
+			if (status == 200) {
+				setVerified(true);
+			}
+		} catch (error) {
+			return error;
+		}
 	};
 
 	const onChangeInput = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -38,6 +66,16 @@ const RegistrationForm: React.FC = () => {
 					errorMessage: `Minimum ${(values as valueProps)[id].minLength} characters required`,
 				},
 			}));
+		} else if (value.length > ((values as valueProps)[id].maxLength ?? 100)) {
+			setValues((prev) => ({
+				...prev,
+				[id]: {
+					...(prev as valueProps)[id],
+					value,
+					errorVisibility: true,
+					errorMessage: `Maximum ${(values as valueProps)[id]?.maxLength} characters allowed`,
+				},
+			}));
 		} else {
 			setValues((prev) => ({
 				...prev,
@@ -50,6 +88,11 @@ const RegistrationForm: React.FC = () => {
 			}));
 		}
 	};
+
+	useEffect(() => {
+		setInputValue('name', user?.displayName || '');
+		setInputValue('email', user?.email || '');
+	}, [user]);
 
 	const renderStage = () => {
 		switch (stage) {
@@ -80,7 +123,7 @@ const RegistrationForm: React.FC = () => {
 						</Wrapper>
 						<ButtonContainer margin="2rem">
 							<Button filled btnText="Back" onClick={() => setStage(STAGES.TYPE_OF_USER)} />
-							<Button btnText="Verify" onClick={() => verifyZimbra()} />
+							<Button btnText="Verify" onClick={verifyZimbra} />
 							<Button filled btnText="Register" disabled={!verified} />
 						</ButtonContainer>
 					</>

@@ -14,7 +14,6 @@ export const RegisterInput = styled.input`
 	${tw`
     border-2
     border-gray-300
-    text-color-primary
     font-Poppins
     font-light
     text-base
@@ -29,6 +28,12 @@ export const RegisterInput = styled.input`
 		border-color: #6a6a6a;
 		outline: none !important;
 	}
+	&::-webkit-inner-spin-button,
+	&::-webkit-outer-spin-button {
+		display: none;
+	}
+	background-color: ${(props) => (props.readOnly ? '#f2f2f2ac' : '#fff')};
+	color: ${(props) => (props.readOnly ? '#898686' : '#000')};
 `;
 
 export const RegisterLabel = styled.label<LabelProps>`
@@ -67,5 +72,44 @@ export const Error = styled(Caption)`
 	@media (max-width: 768px) {
 		font-size: 0.8rem;
 		bottom: -1.2rem;
+	}
+`;
+
+export const ShowPassword = styled.button<{ show: boolean }>`
+	position: absolute;
+	right: 12px;
+	top: 50%;
+	transform: translateY(-90%);
+	width: 25px;
+	height: 25px;
+	background: #aaa;
+	border-radius: 50%;
+	cursor: pointer;
+	border: none;
+	-webkit-appearance: none;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 4px;
+		left: 4px;
+		width: 17px;
+		height: 17px;
+		background: #e3e3e3;
+		z-index: 1;
+		border-radius: 50%;
+	}
+
+	&:after {
+		content: '';
+		display: ${({ show }) => (show === true ? 'none' : 'block')};
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 13px;
+		height: 13px;
+		background: #aaa;
+		z-index: 2;
+		border-radius: 50%;
 	}
 `;

@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import { Button, NavText } from 'Components/atoms';
 import { NavListItems } from 'Constants/Constants';
 import styled from 'styled-components';
 import tw from 'twin.macro';
+import { AuthContext } from 'utils/AuthContext';
+import { googleSignIn, signout } from 'utils/userAuth';
 
 import { ButtonWrapper, LogoImage, LogoText, LogoWrapper, NavItem, NavList } from './styles';
 
@@ -30,6 +32,8 @@ const Wrapper = styled.header`
 `;
 
 const DesktopNavbar: React.FC = () => {
+	const { user } = useContext(AuthContext);
+
 	return (
 		<Wrapper>
 			<LogoWrapper>
@@ -51,7 +55,7 @@ const DesktopNavbar: React.FC = () => {
 			</NavList>
 
 			<ButtonWrapper>
-				<Button btnText="LOGIN"></Button>
+				<Button btnText={user ? 'LOGOUT' : 'LOGIN'} onClick={user ? signout : googleSignIn}></Button>
 			</ButtonWrapper>
 		</Wrapper>
 	);

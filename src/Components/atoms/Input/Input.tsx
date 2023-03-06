@@ -1,18 +1,20 @@
 import React from 'react';
 
 import Caption from '../Typography/Caption';
-import { CustomInput, CustomSelect, Error, RegisterInput, RegisterLabel } from './styles';
+import { CustomInput, CustomSelect, Error, RegisterInput, RegisterLabel, ShowPassword } from './styles';
 import { InputProps } from './types';
 
 const Input: React.FC<InputProps> = ({ objectKey, onBlur, onChange, values }) => {
-	const { placeholder, errorVisibility, errorMessage, value, inputMode, type, options, caption } = values[objectKey];
+	const { placeholder, errorVisibility, errorMessage, value, inputMode, type, options, caption, readOnly } =
+		values[objectKey];
 	const [focused, setFocused] = React.useState(value ? true : false);
+	const [showPassword, setShowPassword] = React.useState(false);
 
 	return (
 		<>
 			{inputMode == 'select' ? (
-				<CustomSelect defaultValue="Please choose one of them">
-					<option value={''}>Please choose one of them</option>
+				<CustomSelect defaultValue="">
+					<option value={''}>{placeholder}</option>
 					{options?.map((option) => (
 						<option key={option} value={option}>
 							{option}
@@ -22,19 +24,26 @@ const Input: React.FC<InputProps> = ({ objectKey, onBlur, onChange, values }) =>
 			) : (
 				<>
 					<CustomInput>
-						<RegisterLabel htmlFor={objectKey} focus={focused}>
+						<RegisterLabel htmlFor={objectKey} focus={!!(focused || value)}>
 							{placeholder}
 						</RegisterLabel>
 						<RegisterInput
 							id={objectKey}
-							type={type}
+							type={type === 'password' ? (showPassword ? 'text' : 'password') : type}
 							value={value}
 							onFocus={() => setFocused(true)}
 							onChange={onChange}
 							onBlur={onBlur}
+							readOnly={readOnly}
 							required
 						/>
-						{caption && <Caption>{caption}</Caption>}
+						{type === 'password' && (
+							<ShowPassword
+								show={showPassword}
+								title="Show Password"
+								onClick={() => setShowPassword((prev) => !prev)}></ShowPassword>
+						)}
+						{caption && <Caption style={{ paddingLeft: '10px' }}>{caption}</Caption>}
 						{errorVisibility && <Error>{errorMessage}</Error>}
 					</CustomInput>
 				</>

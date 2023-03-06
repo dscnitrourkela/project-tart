@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import { Body1, Button } from 'Components/atoms';
 import { NavListItems } from 'Constants/Constants';
+import { AuthContext } from 'utils/AuthContext';
+import { googleSignIn, signout } from 'utils/userAuth';
 
 import { MobileNavItem, MobileNavList, MobileViewList } from '../styles';
 
@@ -10,6 +12,8 @@ type MobileNavProps = {
 };
 
 const MobileNavListComp: React.FC<MobileNavProps> = () => {
+	const { user } = useContext(AuthContext);
+
 	return (
 		<MobileViewList>
 			<MobileNavList>
@@ -21,7 +25,7 @@ const MobileNavListComp: React.FC<MobileNavProps> = () => {
 					</a>
 				))}
 				<div className="mx-auto   pt-[75.5px]">
-					<Button btnText="LOGIN"></Button>
+					<Button btnText={user ? 'LOGOUT' : 'LOGIN'} onClick={user ? signout : googleSignIn}></Button>
 				</div>
 			</MobileNavList>
 		</MobileViewList>
