@@ -9,7 +9,7 @@ import { ButtonProps, StyleProps } from './types';
 const Wrapper = styled.button<StyleProps>`
 	display: flex;
 	justify-content: center;
-	width: fit-content;
+	width: ${(props) => (props.fullWidth ? '100%' : 'fit-content')};
 	border-color: ${(props) => (props.success ? '#5BDB8E' : 'transparent')};
 	border-style: solid;
 	border-width: 2px;
@@ -40,9 +40,15 @@ const Wrapper = styled.button<StyleProps>`
   `}
 `;
 
-const Button: React.FC<ButtonProps> = ({ btnText = 'button', filled = false, success = false, full = false }) => {
+const Button: React.FC<ButtonProps> = ({
+	btnText = 'button',
+	filled = false,
+	success = false,
+	full = false,
+	fullWidth = false,
+}) => {
 	return (
-		<Wrapper filled={filled} success={success} full={full}>
+		<Wrapper filled={filled} success={success} full={full} fullWidth={fullWidth}>
 			<ButtonText>{btnText}</ButtonText>
 			{success && <img src="tick.svg" />}
 		</Wrapper>

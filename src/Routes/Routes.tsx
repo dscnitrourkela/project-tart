@@ -6,6 +6,7 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 const Homepage = React.lazy(() => import('Components/pages/Home'));
 const Playground = React.lazy(() => import('Components/pages/Playground'));
 const EventPage = React.lazy(() => import('Components/pages/Event'));
+const ProfilePage = React.lazy(() => import('Components/pages/Profile'));
 
 const Routes: React.FC = () => {
 	return (
@@ -15,7 +16,8 @@ const Routes: React.FC = () => {
 				<Switch>
 					<Route exact path="/" component={Homepage} />
 					<Route exact path="/event/:eventName" component={EventPage} />
-					<Route path="/playground" component={Playground} />
+					<Route exact path="/playground" component={Playground} />
+					<Route exact path="/profile" component={ProfilePage} />
 				</Switch>
 			</Router>
 			<Footer />
