@@ -4,7 +4,10 @@ import { ButtonText } from 'Components/atoms';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 
-import { ButtonProps, StyleProps } from './types';
+import {
+	ButtonProps,
+	StyleProps,
+} from './types';
 
 const Wrapper = styled.button<StyleProps>`
 	display: flex;

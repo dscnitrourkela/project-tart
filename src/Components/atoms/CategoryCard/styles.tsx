@@ -23,7 +23,7 @@ export const PopImage = styled.img`
 `;
 
 export const Container = styled.div`
-	height: 600px;
+	height: 500px;
 	${tw`
 	flex
 	flex-col
@@ -41,6 +41,10 @@ export const Container = styled.div`
 
 export const Description = styled(Body2)`
 	color: #616161;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 6;
 	${tw`
 	text-center 
 	px-6
@@ -111,6 +115,7 @@ export const Link = styled.span`
 `;
 export const ButtonText = styled(Heading3)`
 	background: -webkit-linear-gradient(81.68deg, #6b014e -4.79%, #03016b 103.83%);
+	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	${tw`
@@ -119,7 +124,7 @@ export const ButtonText = styled(Heading3)`
 `;
 export const ButtonIcon = styled.img`
 	transition: transform 0.4s ease-out;
-	margintop: '0.2em';
+	margin-top: '0.2em';
 	${tw`
 	group-hover:rotate-45
 `}

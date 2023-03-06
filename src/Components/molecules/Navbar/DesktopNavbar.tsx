@@ -1,10 +1,11 @@
 import React from 'react';
+
+import { Button, NavText } from 'Components/atoms';
+import { NavListItems } from 'Constants/Constants';
 import styled from 'styled-components';
 import tw from 'twin.macro';
-import { LogoWrapper, LogoText, NavList, NavItem, ButtonWrapper } from './styles';
-import { Button, NavText } from 'Components/atoms';
-import { LogoImage } from './styles';
-import { NavListItems } from 'Constants/Constants';
+
+import { ButtonWrapper, LogoImage, LogoText, LogoWrapper, NavItem, NavList } from './styles';
 
 const Wrapper = styled.header`
 	box-shadow: 0px 2px 20px rgba(65, 65, 65, 0.1);
@@ -36,7 +37,7 @@ const DesktopNavbar: React.FC = () => {
 					src="https://res.cloudinary.com/dme9vltjf/image/upload/v1677841432/NITRUtsav/Mask_group_yulpep.svg"
 					alt="NU"
 				/>
-				<LogoText>NITRUTSAV 2K23</LogoText>
+				<LogoText>NITRUTSAV 2023</LogoText>
 			</LogoWrapper>
 
 			<NavList>
