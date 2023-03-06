@@ -6,3 +6,4 @@ export { default as About } from './AboutSection/About';
 export { default as Ticker } from './HeroSection/Ticker';
 export { default as EventSection } from './Events/EventSection';
 export { default as RegistrationForm } from './RegistrationForm/RegistrationForm';
+export { default as ProfileSection } from './ProfileSection/ProfileSection';

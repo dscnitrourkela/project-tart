@@ -7,6 +7,7 @@ const Homepage = React.lazy(() => import('Components/pages/Home'));
 const Playground = React.lazy(() => import('Components/pages/Playground'));
 const EventPage = React.lazy(() => import('Components/pages/Event'));
 const Register = React.lazy(() => import('Components/pages/Register'));
+const ProfilePage = React.lazy(() => import('Components/pages/Profile'));
 
 const Routes: React.FC = () => {
 	return (
@@ -15,9 +16,10 @@ const Routes: React.FC = () => {
 			<Router basename="/">
 				<Switch>
 					<Route exact path="/" component={Homepage} />
-					<Route exact path="/event/:eventName" component={EventPage} />
-					<Route path="/playground" component={Playground} />
-					<Route path="/register" component={Register} />
+					<Route path="/event/:eventName" component={EventPage} />
+					<Route exact path="/playground" component={Playground} />
+					<Route exact path="/register" component={Register} />
+					<Route exact path="/profile" component={ProfilePage} />
 				</Switch>
 			</Router>
 			<Footer />

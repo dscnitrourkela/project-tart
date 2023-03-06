@@ -9,6 +9,8 @@ export const PopImage = styled.img`
 	left: 10%;
 	top: 0%;
 	transition: transform 250ms;
+	z-index: -9;
+	transform: translateY(-10px);
 
 	&:hover {
 	}
@@ -21,18 +23,19 @@ export const PopImage = styled.img`
 `;
 
 export const Container = styled.div`
-	height: 500px;
+	height: 600px;
 	${tw`
 	flex
 	flex-col
 	justify-end
 	rounded
-	bg-background-secondary
 	max-w-lg
 	cursor-pointer
 `}
+	z-index: 90;
 	&:hover ${PopImage} {
-		transform: translateY(-250px);
+		z-index: 99;
+		transform: translateY(-200px);
 	}
 `;
 
@@ -53,9 +56,9 @@ export const Clap = styled.div`
 `;
 export const Rotor = styled.img`
 	height: 65px;
+	z-index: 299;
 	${tw`
 	absolute 
-	z-10
 `}
 `;
 
@@ -69,8 +72,9 @@ export const Clapup = styled.div`
 	mb-0.5 
 	rounded-t-xl
 	origin-left
-	group-hover:-rotate-45
+	group-hover:-rotate-[30deg]
 `}
+	z-index:90;
 `;
 export const Clapdown = styled.div`
 	${tw`
@@ -81,6 +85,17 @@ export const Clapdown = styled.div`
 	rounded-b-xl
 	origin-left
 `}
+	position: inherit;
+	z-index: 199;
+`;
+
+export const DescriptionBox = styled.div`
+	${tw`
+		flex
+		flex-col
+		bg-background-secondary
+	`}
+	z-index: 299;
 `;
 
 export const Link = styled.span`

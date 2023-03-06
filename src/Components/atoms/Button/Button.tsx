@@ -7,7 +7,9 @@ import tw from 'twin.macro';
 import { ButtonProps, StyleProps } from './types';
 
 const Wrapper = styled.button<StyleProps>`
-	width: ${(props) => (props.full ? '100%' : 'auto')};
+	display: flex;
+	justify-content: center;
+	width: ${(props) => (props.fullWidth ? '100%' : 'fit-content')};
 	border-color: ${(props) => (props.success ? '#5BDB8E' : 'transparent')};
 	border-style: solid;
 	border-width: 2px;
@@ -41,11 +43,11 @@ const Button: React.FC<ButtonProps> = ({
 	btnText = 'button',
 	filled = false,
 	success = false,
-	full = false,
+	fullWidth = false,
 	onClick,
 }) => {
 	return (
-		<Wrapper filled={filled} success={success} full={full} onClick={onClick}>
+		<Wrapper filled={filled} success={success} fullWidth={fullWidth} onClick={onClick}>
 			<ButtonText>{btnText}</ButtonText>
 			{success && <img src="tick.svg" />}
 		</Wrapper>
