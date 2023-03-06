@@ -36,3 +36,15 @@ export interface valueProps {
 		caption?: string;
 	};
 }
+
+export interface inputProps {
+	name?: string;
+	email?: string;
+	mobile?: string;
+	gender?: string;
+	state?: string;
+	city?: string;
+	college?: string;
+	stream?: string;
+	rollNumber?: string;
+}

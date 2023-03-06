@@ -1,4 +1,4 @@
-import { valueProps } from './types';
+import { inputProps, valueProps } from './types';
 
 export const NavListItems = [
 	{
@@ -127,7 +127,7 @@ export const INIT_STATE = {
 	errorMessage: '',
 };
 
-export const INPUTS = ({
+export const INPUTS: (arg0: inputProps) => valueProps = ({
 	name = '',
 	email = '',
 	mobile = '',
