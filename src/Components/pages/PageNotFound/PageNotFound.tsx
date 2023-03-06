@@ -9,7 +9,7 @@ import { Center, Heading, Image, Wrapper } from './styles';
 const PageNotFound: React.FC = () => {
 	const history = useHistory();
 
-	const handleGoHome = (e: { preventDefault: () => void }) => {
+	const handleGoHome = (e: React.MouseEvent<HTMLButtonElement>) => {
 		e.preventDefault();
 		history.push('/');
 	};
