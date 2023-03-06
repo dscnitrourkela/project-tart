@@ -60,7 +60,7 @@
 
 ## About The Project
 
-Innovision 2022
+Nitrutsav 2023
 
 ## Built With
 
