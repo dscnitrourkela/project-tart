@@ -13,6 +13,9 @@ type MobileNavProps = {
 
 const MobileNavListComp: React.FC<MobileNavProps> = () => {
 	const { user } = useContext(AuthContext);
+	const handleLogin = () => {
+		user ? signout() : googleSignIn();
+	};
 
 	return (
 		<MobileViewList>
@@ -25,7 +28,7 @@ const MobileNavListComp: React.FC<MobileNavProps> = () => {
 					</a>
 				))}
 				<div className="mx-auto   pt-[75.5px]">
-					<Button btnText={user ? 'LOGOUT' : 'LOGIN'} onClick={user ? signout : googleSignIn}></Button>
+					<Button btnText={user ? 'LOGOUT' : 'LOGIN'} onClick={handleLogin}></Button>
 				</div>
 			</MobileNavList>
 		</MobileViewList>

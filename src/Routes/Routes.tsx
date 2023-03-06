@@ -13,8 +13,8 @@ const PageNotFound = React.lazy(() => import('Components/pages/PageNotFound'));
 const Routes: React.FC = () => {
 	return (
 		<Suspense fallback={<h1>Loading...</h1>}>
-			<Navbar />
 			<Router basename="/">
+				<Navbar />
 				<Switch>
 					<Route exact path="/" component={Homepage} />
 					<Route path="/event/:eventName" component={EventPage} />
@@ -23,8 +23,8 @@ const Routes: React.FC = () => {
 					<Route exact path="/profile" component={ProfilePage} />
 					<Route exact path="*" component={PageNotFound} />
 				</Switch>
+				<Footer />
 			</Router>
-			<Footer />
 		</Suspense>
 	);
 };

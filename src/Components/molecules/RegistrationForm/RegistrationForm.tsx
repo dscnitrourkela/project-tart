@@ -1,8 +1,11 @@
+import 'react-toastify/dist/ReactToastify.css';
+
 import React, { useEffect } from 'react';
 
 import { Button, Caption, Heading3, Input } from 'Components/atoms';
 import { INPUTS, STAGES } from 'Constants/Constants';
 import { valueProps } from 'Constants/types';
+import { toast, ToastContainer } from 'react-toastify';
 import { avenueApi } from 'utils/api';
 import { AuthContext } from 'utils/AuthContext';
 
@@ -24,9 +27,16 @@ const RegistrationForm: React.FC = () => {
 		}));
 	};
 
-	const verifyZimbra = async () => {
-		const { password, rollNumber } = values;
+	const handleVerify = () => {
+		toast.promise(verifyZimbra, {
+			pending: 'Verifying...',
+			success: 'Verified!',
+			error: 'Invalid credentials',
+		});
+	};
 
+	const verifyZimbra = async (): Promise<void> => {
+		const { password, rollNumber } = values;
 		try {
 			const { status } = await avenueApi.get('/zimbra-login', {
 				params: {
@@ -37,9 +47,11 @@ const RegistrationForm: React.FC = () => {
 
 			if (status == 200) {
 				setVerified(true);
+			} else {
+				throw new Error('Invalid credentials');
 			}
 		} catch (error) {
-			return error;
+			throw new Error('ERROR');
 		}
 	};
 
@@ -123,7 +135,7 @@ const RegistrationForm: React.FC = () => {
 						</Wrapper>
 						<ButtonContainer margin="2rem">
 							<Button filled btnText="Back" onClick={() => setStage(STAGES.TYPE_OF_USER)} />
-							<Button btnText="Verify" onClick={verifyZimbra} />
+							<Button btnText="Verify" onClick={() => handleVerify()} />
 							<Button filled btnText="Register" disabled={!verified} />
 						</ButtonContainer>
 					</>
@@ -154,7 +166,23 @@ const RegistrationForm: React.FC = () => {
 		}
 	};
 
-	return renderStage();
+	return (
+		<>
+			{renderStage()}
+			<ToastContainer
+				position="bottom-left"
+				autoClose={5000}
+				hideProgressBar={false}
+				newestOnTop={false}
+				closeOnClick
+				rtl={false}
+				pauseOnFocusLoss
+				draggable
+				pauseOnHover
+				theme="colored"
+			/>
+		</>
+	);
 };
 
 export default RegistrationForm;
