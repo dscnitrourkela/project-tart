@@ -2,7 +2,6 @@ import React from 'react';
 
 import { Body1, Button } from 'Components/atoms';
 import { NavListItems } from 'Constants/Constants';
-
 import { MobileNavItem, MobileNavList, MobileViewList } from '../styles';
 
 type MobileNavProps = {
