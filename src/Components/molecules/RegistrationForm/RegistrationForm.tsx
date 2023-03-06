@@ -9,6 +9,11 @@ import { ButtonContainer, Form, Wrapper } from './styles';
 const RegistrationForm: React.FC = () => {
 	const [values, setValues] = React.useState(INPUTS({}));
 	const [stage, setStage] = React.useState(STAGES.TYPE_OF_USER);
+	const [verified, setVerified] = React.useState(false);
+
+	const verifyZimbra = async () => {
+		setVerified(true);
+	};
 
 	const onChangeInput = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
 		const { id, value } = e.target;
@@ -75,8 +80,8 @@ const RegistrationForm: React.FC = () => {
 						</Wrapper>
 						<ButtonContainer margin="2rem">
 							<Button filled btnText="Back" onClick={() => setStage(STAGES.TYPE_OF_USER)} />
-							<Button btnText="Verify" />
-							<Button filled btnText="Register" />
+							<Button btnText="Verify" onClick={() => verifyZimbra()} />
+							<Button filled btnText="Register" disabled={!verified} />
 						</ButtonContainer>
 					</>
 				);
