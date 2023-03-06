@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { ButtonText } from 'Components/atoms';
+import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 
@@ -47,21 +48,28 @@ const Button: React.FC<ButtonProps> = ({
 	success = false,
 	fullWidth = false,
 	disabled = false,
+	link,
 	onClick,
 }) => {
+	const history = useHistory();
+
 	return (
-		<Wrapper
-			filled={filled}
-			success={success}
-			fullWidth={fullWidth}
-			onClick={onClick}
-			aria-disabled={disabled}
-			disabled={disabled}>
-			<ButtonText aria-disabled={disabled} disabled={disabled}>
-				{btnText}
-			</ButtonText>
-			{success && <img src="tick.svg" />}
-		</Wrapper>
+		<div>
+			<Wrapper
+				filled={filled}
+				success={success}
+				fullWidth={fullWidth}
+				onClick={link ? () => history.push(link) : onClick}
+				aria-disabled={disabled}
+				disabled={disabled}>
+				{
+					<ButtonText aria-disabled={disabled} disabled={disabled}>
+						{btnText}
+					</ButtonText>
+				}
+				{success && <img src="tick.svg" />}
+			</Wrapper>
+		</div>
 	);
 };
 

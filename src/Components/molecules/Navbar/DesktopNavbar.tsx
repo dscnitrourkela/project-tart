@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 
 import { Button, NavText } from 'Components/atoms';
 import { NavListItems } from 'Constants/Constants';
+import { useHistory } from 'react-router-dom';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 import { AuthContext } from 'utils/AuthContext';
@@ -33,10 +34,24 @@ const Wrapper = styled.header`
 
 const DesktopNavbar: React.FC = () => {
 	const { user } = useContext(AuthContext);
+	const history = useHistory();
+
+	const handleLogoClick = () => {
+		history.push('/');
+	};
+
+	const handleLogin = async () => {
+		if (user) {
+			signout();
+		} else {
+			await googleSignIn();
+			history.push('/register');
+		}
+	};
 
 	return (
 		<Wrapper>
-			<LogoWrapper>
+			<LogoWrapper onClick={handleLogoClick}>
 				<LogoImage
 					src="https://res.cloudinary.com/dme9vltjf/image/upload/v1677841432/NITRUtsav/Mask_group_yulpep.svg"
 					alt="NU"
@@ -55,7 +70,7 @@ const DesktopNavbar: React.FC = () => {
 			</NavList>
 
 			<ButtonWrapper>
-				<Button btnText={user ? 'LOGOUT' : 'LOGIN'} onClick={user ? signout : googleSignIn}></Button>
+				<Button btnText={user ? 'LOGOUT' : 'LOGIN'} onClick={handleLogin}></Button>
 			</ButtonWrapper>
 		</Wrapper>
 	);
