@@ -6,7 +6,6 @@ export const Container = styled.div`
 	width: 85%;
 	margin: 0 auto;
 	margin-top: 10%;
-	margin-bottom: 10%;
 	display: flex;
 	gap: 5%;
 	flex-direction: row;
@@ -44,7 +43,7 @@ export const AboutHeading = styled.h1`
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
-	text-fill-color: transparent;
+	-webkit-text-fill-color: transparent;
 	margin-bottom: 20px;
 
 	@media (max-width: 1200px) {

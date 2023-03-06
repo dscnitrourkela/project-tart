@@ -1,26 +1,29 @@
 import React from 'react';
 
+import { NavLink } from 'react-router-dom';
+
 import {
-	ButtonText,
 	ButtonIcon,
+	ButtonText,
 	Clap,
 	Clapdown,
 	Clapup,
 	Container,
 	Description,
+	DescriptionBox,
 	DownSpan,
 	Link,
 	PopImage,
 	Rotor,
 	UpSpan,
-	DescriptionBox,
 } from './styles';
+import { CategoryCardProps } from './types';
 
-const Card: React.FC = () => {
+const Card: React.FC<CategoryCardProps> = ({ title, description, image, link }) => {
 	return (
 		<Container className="group">
 			<Clap>
-				<PopImage src="PopImage.svg" alt="PopImage" />
+				<PopImage src={image} alt={`${title} Category`} />
 				<Rotor src="Rotor.svg" alt="alt" />
 				<Clapup>
 					{Array(10)
@@ -38,13 +41,11 @@ const Card: React.FC = () => {
 				</Clapdown>
 			</Clap>
 			<DescriptionBox>
-				<Description>
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere voluptas asperiores neque reprehenderit earum
-					in, vero soluta officiis dolore eaque cum ipsam ut, architecto, magnam iste illo. Iure vitae ipsa repellendus
-					quos.
-				</Description>
+				<Description>{description}</Description>
 				<Link>
-					<ButtonText>Proshows</ButtonText>
+					<ButtonText>
+						<NavLink to={`/event/${link}`}>{title}</NavLink>
+					</ButtonText>
 					<ButtonIcon width="4%" height="auto" src="Vector.svg" />
 				</Link>
 			</DescriptionBox>
