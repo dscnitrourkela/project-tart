@@ -58,7 +58,7 @@ export const Clap = styled.div`
 	rounded-t-xl
 `}
 `;
-export const Rotor = styled.img`
+export const Rotor = styled.div`
 	height: 65px;
 	z-index: 299;
 	${tw`
@@ -122,7 +122,7 @@ export const ButtonText = styled(Heading3)`
 	
 `}
 `;
-export const ButtonIcon = styled.img`
+export const ButtonIcon = styled.div`
 	transition: transform 0.4s ease-out;
 	margin-top: '0.2em';
 	${tw`
