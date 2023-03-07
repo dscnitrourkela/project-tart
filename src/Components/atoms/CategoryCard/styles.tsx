@@ -12,9 +12,6 @@ export const PopImage = styled.img`
 	z-index: -9;
 	transform: translateY(-10px);
 
-	&:hover {
-	}
-
 	${tw`
 	mx-auto
 	h-64

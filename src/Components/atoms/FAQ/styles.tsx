@@ -42,7 +42,7 @@ export const Answer = styled.div<DisplayProps>`
 `;
 
 export const FAQButton = styled.button<DisplayProps>`
-	transform: ${(props) => (props.answered ? 'rotate(-180deg)' : 'rotate(0deg)')};
+	transform: ${(props) => (props.answered ? 'rotate(0deg)' : 'rotate(-180deg)')};
 	transition: transform 0.5s ease-in-out;
 	${tw`
     focus:outline-none
