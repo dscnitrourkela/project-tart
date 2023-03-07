@@ -5,6 +5,7 @@ import { useHistory } from 'react-router-dom';
 import { LogoImage, LogoText, LogoWrapper } from '../styles';
 import MobileNavList from './MobileNavList/MobileNavList';
 import { MenuButton, NavBar } from './styles';
+import NU_logo from 'assets/NU_logo.svg';
 
 const MobileNav: React.FC = () => {
 	const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -25,10 +26,7 @@ const MobileNav: React.FC = () => {
 			<div>
 				<nav className="mobileNavWrapper">
 					<LogoWrapper onClick={handleLogoClick}>
-						<LogoImage
-							src="https://res.cloudinary.com/dme9vltjf/image/upload/v1677841432/NITRUtsav/Mask_group_yulpep.svg"
-							alt="NU"
-						/>
+						<LogoImage src={NU_logo} alt="NU" />
 						<LogoText>NITRUTSAV 2023</LogoText>
 					</LogoWrapper>
 

@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Body1, Body2 } from 'Components/atoms';
 import { footer } from 'Constants/Constants';
+import NU_logo from 'assets/NU_logo.svg';
 
 import {
 	Container,
@@ -27,7 +28,7 @@ const Footer: React.FC = () => {
 					<PrimaryContainer>
 						<EventWrapper>
 							<LogoWrapper>
-								<Logo src="NU_Logo.svg" alt={footer.Logo.alt} />
+								<Logo src={NU_logo} alt={footer.Logo.alt} />
 								<Body2 bold>{footer.Logo.title}</Body2>
 							</LogoWrapper>
 							<EventText>

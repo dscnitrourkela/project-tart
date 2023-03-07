@@ -4,13 +4,13 @@ import { About, EventSection, FAQSection, HeroSection, Ticker } from 'Components
 
 const Home: React.FC = () => {
 	return (
-		<>
+		<div className="overflow-x-hidden">
 			<HeroSection />
 			<Ticker />
 			<About />
 			<EventSection />
 			<FAQSection />
-		</>
+		</div>
 	);
 };
 

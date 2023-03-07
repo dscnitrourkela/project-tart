@@ -7,6 +7,7 @@ import styled from 'styled-components';
 import tw from 'twin.macro';
 import { AuthContext } from 'utils/AuthContext';
 import { googleSignIn, signout } from 'utils/userAuth';
+import NU_logo from 'assets/NU_logo.svg';
 
 import { ButtonWrapper, LogoImage, LogoText, LogoWrapper, NavItem, NavList } from './styles';
 
@@ -53,7 +54,8 @@ const DesktopNavbar: React.FC = () => {
 		<Wrapper>
 			<LogoWrapper onClick={handleLogoClick}>
 				<LogoImage
-					src="https://res.cloudinary.com/dme9vltjf/image/upload/v1677841432/NITRUtsav/Mask_group_yulpep.svg"
+					// src="https://res.cloudinary.com/dme9vltjf/image/upload/v1677841432/NITRUtsav/Mask_group_yulpep.svg"
+					src={NU_logo}
 					alt="NU"
 				/>
 				<LogoText>NITRUTSAV 2023</LogoText>
