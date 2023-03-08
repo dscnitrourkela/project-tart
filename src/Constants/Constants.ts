@@ -97,7 +97,7 @@ export const FAQs = [
 	{
 		question: 'Any recognition for the events?',
 		answer:
-			'Those who win will be provided with certificates and exciting gifts. Also there are cash prizes for some of the events.',
+			'The winners will be provided with certificates and exciting gifts or cash prizes.',
 	},
 	{
 		question: 'When will the accommodation start for participants?',
