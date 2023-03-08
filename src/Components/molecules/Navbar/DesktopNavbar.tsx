@@ -62,7 +62,7 @@ const DesktopNavbar: React.FC = () => {
 
 			<NavList>
 				{NavListItems.map((item) => (
-					<a href="{item.src}" key={item.index}>
+					<a href={item.src} key={item.index}>
 						<NavItem>
 							<NavText>{item.name}</NavText>
 						</NavItem>
