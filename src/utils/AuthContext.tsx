@@ -23,7 +23,6 @@ export const AuthContext = React.createContext<AuthContextProps>({} as AuthConte
 const AuthContextProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 	const [userData, setUserData] = React.useState({});
 	const [user, setUser] = React.useState<FireBaseUser | null>();
-	const [message, setMessage] = React.useState(true);
 	const [accessToken, setAccessToken] = React.useState('');
 
 	useEffect(() => {
@@ -41,10 +40,7 @@ const AuthContextProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
 					if (currUser) {
 						setUserData(currUser);
-						if (message) {
-							toast.success('Already Registered.');
-							setMessage(false);
-						}
+						toast.success('Already Registered.');
 					} else if (user) toast.info('You are not registered. Please register to continue.');
 				} catch (error) {
 					setUserData({});
