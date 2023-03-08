@@ -109,6 +109,8 @@ export const footer = {
 	Logo: {
 		title: 'NITRUTSAV 2023',
 		alt: 'logo',
+		about:
+			'NITRUTSAV, the Literary and Cultural Fest of NIT Rourkela works to give students a creative outlet to commemorate and introspectively explore their mind filled with ingenuity and innovation.',
 	},
 	ImpLinks: {
 		title: 'Quick Links',

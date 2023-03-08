@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import { NavLink } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
+import { SVGIcon } from 'Components/atoms';
 import {
 	ButtonIcon,
 	ButtonText,
@@ -19,12 +20,34 @@ import {
 } from './styles';
 import { CategoryCardProps } from './types';
 
+import { ReactComponent as rotor } from 'assets/Rotor.svg';
+import { ReactComponent as arrow } from 'assets/Vector.svg';
+
 const Card: React.FC<CategoryCardProps> = ({ title, description, image, link }) => {
+	const history = useHistory();
+	const [rotorColor, setRotorColor] = useState<string>('#ACACAC');
+	const [arrowColor, setArrowColor] = useState<string>('#03016B');
+
+	const handleEventCardClick = () => {
+		history.push(`/event/${link}`);
+	};
 	return (
-		<Container className="group">
+		<Container
+			onMouseOver={() => {
+				setRotorColor('#03016B');
+				setArrowColor('#fff');
+			}}
+			onMouseOut={() => {
+				setRotorColor('#ACACAC');
+				setArrowColor('#03016B');
+			}}
+			onClick={handleEventCardClick}
+			className="group">
 			<Clap>
 				<PopImage src={image} alt={`${title} Category`} />
-				<Rotor src="Rotor.svg" alt="alt" />
+				<Rotor>
+					<SVGIcon Icon={rotor} color={rotorColor} />
+				</Rotor>
 				<Clapup>
 					{Array(10)
 						.fill(null)
@@ -43,10 +66,10 @@ const Card: React.FC<CategoryCardProps> = ({ title, description, image, link }) 
 			<DescriptionBox>
 				<Description>{description}</Description>
 				<Link>
-					<ButtonText>
-						<NavLink to={`/event/${link}`}>{title}</NavLink>
-					</ButtonText>
-					<ButtonIcon width="4%" height="auto" src="Vector.svg" />
+					<ButtonText>{title}</ButtonText>
+					<ButtonIcon>
+						<SVGIcon Icon={arrow} color={arrowColor} />
+					</ButtonIcon>
 				</Link>
 			</DescriptionBox>
 		</Container>

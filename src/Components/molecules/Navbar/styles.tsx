@@ -31,19 +31,6 @@ export const LogoText = styled.p`
 `}
 `;
 
-// export const ResponsiveMenu = styled.div`
-// 	${tw`
-//     flex
-//     md:static
-//     absolute
-//     flex-col
-//     md:flex-row
-//     md:justify-around
-//     top-[-100%]
-//     w-full
-
-// `}
-// `;
 export const NavList = styled.ul`
 	${tw`
     flex
@@ -72,11 +59,3 @@ export const ButtonWrapper = styled.div`
     top-[-300%]
 `}
 `;
-
-// export const MenuButton = styled.img`
-// 	background: transparent;
-// 	${tw`
-//     py-7
-//     cursor-pointer
-//     `}
-// `;

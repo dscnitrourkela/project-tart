@@ -14,6 +14,7 @@ import {
 	Poster,
 	RightCard,
 	Title,
+	X,
 } from './styles';
 import { TicketProps } from './types';
 
@@ -22,7 +23,10 @@ const Ticket: React.FC<{ data: TicketProps; onClick: () => void }> = ({ data, on
 
 	return (
 		<Container>
-			<Close src="close.svg" alt="close" onClick={onClick} />
+			{/* <Close src="close.svg" alt="close" onClick={onClick} /> */}
+			<Close onClick={onClick}>
+				<X>X</X>
+			</Close>
 			<LeftCard>
 				<Heading4>About</Heading4>
 				<Description>
@@ -56,7 +60,7 @@ const Ticket: React.FC<{ data: TicketProps; onClick: () => void }> = ({ data, on
 				<Body1 bold>
 					Prizes : <Heading>Worth {prizes}</Heading>
 				</Body1>
-				<Button filled btnText="Book Slots" />
+				<Button fullWidth filled btnText="Book Slots" />
 				<Circle1 />
 				<Circle2 />
 			</RightCard>
