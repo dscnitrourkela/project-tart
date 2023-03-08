@@ -8,7 +8,7 @@ export const PopImage = styled.img`
 	position: absolute;
 	left: 10%;
 	top: 0%;
-	transition: transform 250ms;
+	transition: transform 500ms;
 	z-index: -9;
 	transform: translateY(-10px);
 
