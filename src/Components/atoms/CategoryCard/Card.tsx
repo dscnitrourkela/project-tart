@@ -26,7 +26,7 @@ import { ReactComponent as arrow } from 'assets/Vector.svg';
 const Card: React.FC<CategoryCardProps> = ({ title, description, image, link }) => {
 	const history = useHistory();
 	const [rotorColor, setRotorColor] = useState<string>('#ACACAC');
-	const [arrowColor, setArrowColor] = useState<string>('#000000');
+	const [arrowColor, setArrowColor] = useState<string>('#03016B');
 
 	const handleEventCardClick = () => {
 		history.push(`/event/${link}`);
@@ -39,7 +39,7 @@ const Card: React.FC<CategoryCardProps> = ({ title, description, image, link }) 
 			}}
 			onMouseOut={() => {
 				setRotorColor('#ACACAC');
-				setArrowColor('#000');
+				setArrowColor('#03016B');
 			}}
 			onClick={handleEventCardClick}
 			className="group">
