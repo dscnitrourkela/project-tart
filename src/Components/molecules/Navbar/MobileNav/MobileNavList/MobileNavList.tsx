@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 
 import { Body1, Button } from 'Components/atoms';
 import { NavListItems } from 'Constants/Constants';
+import { useHistory } from 'react-router-dom';
 import { AuthContext } from 'utils/AuthContext';
 import { googleSignIn, signout } from 'utils/userAuth';
 
@@ -12,9 +13,17 @@ type MobileNavProps = {
 };
 
 const MobileNavListComp: React.FC<MobileNavProps> = () => {
-	const { user } = useContext(AuthContext);
-	const handleLogin = () => {
-		user ? signout() : googleSignIn();
+	const history = useHistory();
+
+	const { user, userData } = useContext(AuthContext);
+	const handleLogin = async () => {
+		if (user) {
+			signout();
+			history.push('/');
+		} else {
+			await googleSignIn();
+			userData?.name ? history.push('/profile') : history.push('/register');
+		}
 	};
 
 	return (

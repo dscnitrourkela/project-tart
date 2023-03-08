@@ -33,11 +33,13 @@ export interface valueProps {
 		errorVisibility?: boolean;
 		errorMessage?: string;
 		options?: string[];
+		optionValues?: string[];
 		caption?: string;
 	};
 }
 
 export interface userData {
+	id?: string;
 	name?: string;
 	email?: string;
 	mobile?: string;

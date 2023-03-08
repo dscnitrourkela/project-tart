@@ -33,7 +33,7 @@ const Wrapper = styled.header`
 `;
 
 const DesktopNavbar: React.FC = () => {
-	const { user } = useContext(AuthContext);
+	const { user, userData } = useContext(AuthContext);
 	const history = useHistory();
 
 	const handleLogoClick = () => {
@@ -43,9 +43,10 @@ const DesktopNavbar: React.FC = () => {
 	const handleLogin = async () => {
 		if (user) {
 			signout();
+			history.push('/');
 		} else {
 			await googleSignIn();
-			history.push('/register');
+			userData?.name ? history.push('/profile') : history.push('/register');
 		}
 	};
 
