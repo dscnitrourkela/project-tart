@@ -183,6 +183,7 @@ export const INPUTS: (arg0: userData) => valueProps = ({
 		inputMode: 'select',
 		key: 'gender',
 		show: 'both',
+		optionValues: ['MALE', 'FEMALE', 'OTHERS'],
 		options: ['Male', 'Female', 'Prefer not to say'],
 		maxLength: 50,
 		minLength: 1,
