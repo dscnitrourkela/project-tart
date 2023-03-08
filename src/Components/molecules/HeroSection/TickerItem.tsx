@@ -1,13 +1,18 @@
 import React from 'react';
 
-import { ItemContainer, TickerIcon, Image, ImageConatiner } from './styles';
+import { Image, ImageConatiner, ItemContainer, TickerIcon } from './styles';
 
-const TickerItem: React.FC = () => {
+interface TickerItemProps {
+	image?: string;
+	alt?: string;
+}
+
+const TickerItem: React.FC<TickerItemProps> = ({ image, alt }) => {
 	return (
 		<ItemContainer>
 			<ImageConatiner>
 				<TickerIcon src="TickerImg.svg" alt="IMG" />
-				<Image src="tree.jpg" alt="alt" />
+				<Image src={image} alt={alt} />
 			</ImageConatiner>
 		</ItemContainer>
 	);
