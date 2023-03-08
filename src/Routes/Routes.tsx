@@ -9,6 +9,7 @@ const EventPage = React.lazy(() => import('Components/pages/Event'));
 const Register = React.lazy(() => import('Components/pages/Register'));
 const ProfilePage = React.lazy(() => import('Components/pages/Profile'));
 const PageNotFound = React.lazy(() => import('Components/pages/PageNotFound'));
+const TxnSuccessScreen = React.lazy(() => import('Components/pages/TxnSuccessScreen'));
 
 const Routes: React.FC = () => {
 	return (
@@ -21,6 +22,7 @@ const Routes: React.FC = () => {
 					<Route exact path="/playground" component={Playground} />
 					<Route exact path="/register" component={Register} />
 					<Route exact path="/profile" component={ProfilePage} />
+					<Route exact path="/txn-success" component={TxnSuccessScreen} />
 					<Route exact path="*" component={PageNotFound} />
 				</Switch>
 				<Footer />
