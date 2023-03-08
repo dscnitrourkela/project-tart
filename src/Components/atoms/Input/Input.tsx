@@ -5,18 +5,33 @@ import { CustomInput, CustomSelect, Error, RegisterInput, RegisterLabel, ShowPas
 import { InputProps } from './types';
 
 const Input: React.FC<InputProps> = ({ objectKey, onBlur, onChange, values }) => {
-	const { placeholder, errorVisibility, errorMessage, value, inputMode, type, options, caption, readOnly } =
-		values[objectKey];
+	const {
+		placeholder,
+		errorVisibility,
+		errorMessage,
+		value,
+		inputMode,
+		type,
+		options,
+		optionValues,
+		caption,
+		readOnly,
+	} = values[objectKey];
 	const [focused, setFocused] = React.useState(value ? true : false);
 	const [showPassword, setShowPassword] = React.useState(false);
+
+	const handlePasswordVisibility = (e: React.MouseEvent<HTMLButtonElement>) => {
+		e.preventDefault();
+		setShowPassword((prev) => !prev);
+	};
 
 	return (
 		<>
 			{inputMode == 'select' ? (
-				<CustomSelect defaultValue="">
+				<CustomSelect value={value} onChange={onChange} id={objectKey}>
 					<option value={''}>{placeholder}</option>
-					{options?.map((option) => (
-						<option key={option} value={option}>
+					{options?.map((option, index) => (
+						<option key={option} value={optionValues ? optionValues[index] : option}>
 							{option}
 						</option>
 					))}
@@ -38,10 +53,7 @@ const Input: React.FC<InputProps> = ({ objectKey, onBlur, onChange, values }) =>
 							required
 						/>
 						{type === 'password' && (
-							<ShowPassword
-								show={showPassword}
-								title="Show Password"
-								onClick={() => setShowPassword((prev) => !prev)}></ShowPassword>
+							<ShowPassword show={showPassword} title="Show Password" onClick={handlePasswordVisibility}></ShowPassword>
 						)}
 						{caption && <Caption style={{ paddingLeft: '10px' }}>{caption}</Caption>}
 						{errorVisibility && <Error>{errorMessage}</Error>}

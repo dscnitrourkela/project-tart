@@ -3,52 +3,105 @@ import { userData, valueProps } from './types';
 export const NavListItems = [
 	{
 		index: 1,
-		src: '#',
-		name: 'Events',
+		src: '/',
+		name: 'Home',
 	},
 	{
 		index: 2,
-		src: '#',
-		name: 'Events',
+		src: '/event/pro',
+		name: 'Pro Show',
 	},
 	{
 		index: 3,
-		src: '#',
-		name: 'Events',
+		src: '/',
+		name: 'Main',
+	},
+	{
+		index: 4,
+		src: '/',
+		name: 'Flagship',
+	},
+	{
+		index: 5,
+		src: '/',
+		name: 'Fun',
+	},
+	{
+		index: 6,
+		src: '/event/exhibitions',
+		name: 'Exhibition',
+	},
+	{
+		index: 7,
+		src: '/event/workshops',
+		name: 'Workshops',
 	},
 ];
 
 export const AboutContent = {
 	title: 'NITRUTSAV 2023',
-	description: `Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-	aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-	Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
-	dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-	amet, consectetur. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-	laudantium, totam rem aperiam.`,
+	description: `National Institute of Technology, Rourkela, enunciate the "offline" 
+	edition of its very own literary and cultural festival, NITRUTSAV 2023.
+	Nitrutsav works to give students a creative outlet to commemorate 
+	and introspectively explore their creative freedom with pioneering 
+	ideas, celebrating the creative goodwill of a mind filled with ingenuity 
+	and innovation. With a plethora of fascinating cultural events, it also 
+	provides students with a gateway to showcase their creative zeal and 
+	appreciate their artistic aspects and willingness to discover hidden 
+	talents. With the hackneyed breakdown of academia and constant 
+	improvisation of grades, NITRUTSAV delivers different experiences to 
+	lure your mind to relaxation and enthusiasm.
+	In the bizarre outbreak of the COVID-19 pandemic, Nitrusav was 
+	hosted on your screens last year. The essence of Nitrusav is restored 
+	to its complete form to captivate you through your eyes and into your 
+	mind.This time with the theme of "An Indian Filmic Fete", this 
+	impeccable beauty will mesmerise right through the windows of your 
+	soul.`,
 	trailerLink: 'https://www.youtube.com/embed/AY1Hxf5_hiE',
 };
 
 export const FAQs = [
 	{
-		question: 'What is Innovision?',
-		answer: 'Innovision is a fest',
+		question: 'What is NITRUTSAV?',
+		answer:
+			'It is Eastern India’s one of most engrossing and intriguing student-held literary and cultural fest in which college students from all over the country can participate to outcast their creative zeal and skills.',
 	},
 	{
-		question: 'What is Innovision1?',
-		answer: 'Innovision is a fest',
+		question: 'Who can participate?',
+		answer:
+			'Any active and enthusiastic student who wills to present his/her skills and talent in dance, drama, music and many more, from any college/university.',
 	},
 	{
-		question: 'What is Innovision2?',
-		answer: 'Innovision is a fest',
+		question: 'How to participate?',
+		answer: 'One can visit our website for registration, and you will be provided with all the details there.',
 	},
 	{
-		question: 'What is Innovision3?',
-		answer: 'Innovision is a fest',
+		question: 'What is the goal of the fest?',
+		answer:
+			'To provide interested students with the best platform to showcase their skills in the field of literature and culture and to encourage the sense of pride for the same.',
 	},
 	{
-		question: 'What is Innovision4?',
-		answer: 'Innovision is a fest',
+		question: 'What is the mode of conduction of the fest?',
+		answer: 'NITRUSAV comes with a bang after 3 years in its offline edition. This time it is purely offline.',
+	},
+	{
+		question: 'What’s the cost of participation?',
+		answer:
+			'There is Rs.800 per head for participation. This also includes for accommodation and facilities and they can register for any event as per their choice. Note that this amount is Non-Refundable. ',
+	},
+	{
+		question: 'Is there any accommodation facility?',
+		answer:
+			'Yes, for participants and students from different college will be accommodated in the campus’s own hostels and facilities will also be provided accordingly.',
+	},
+	{
+		question: 'Any recognition for the events?',
+		answer:
+			'Those who win will be provided with certificates and exciting gifts. Also there are cash prizes for some of the events.',
+	},
+	{
+		question: 'When will the accommodation start for participants?',
+		answer: 'The accommodation will start on 16th March’23 from 2 PM onwards.',
 	},
 ];
 
@@ -84,16 +137,14 @@ export const Events = [
 	{
 		slugName: 'technical',
 		title: 'Technical',
-		description:
-			'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur',
+		description: `The main events are the heart of Nitrutsav, they are planned accordingly to give minds surprising thoughts. It includes a wide range of cultural and literary events that shows the cultural legacy of Odisha, Some massive dance performances, club events, and acts that show the reality on the stage, a poetic glimpse and a day for love, and fashion-related events too that are worth experiencing.`,
 		image:
 			'https://res.cloudinary.com/dujqfyato/image/upload/v1677910284/TART/Marble_sculpture_of_historical_figure_with_medical_mask_haxidf.svg',
 	},
 	{
 		slugName: 'pro',
 		title: 'Pro Show',
-		description:
-			'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur',
+		description: `Nitrutsav presents an exclusive opportunity to break from the monotonous nexus of academia and is all set to instill exhilaration and verve in each one of you!! Come grab a friend or two, and experience the cardinal juncture of culture and innovation like never before!! Groove to your favourite music, by the musical maestros of your favourite bands, dance to the tunes of the best DJs, and savour the memories of laughing at the antics of the stand-up comedians. Boost your spirits, meet and interact with new people, and don't miss this once-in-a-lifetime opportunity to see the revered artists perform!!`,
 		image:
 			'https://res.cloudinary.com/dujqfyato/image/upload/v1677910284/TART/Marble_sculpture_of_historical_figure_with_medical_mask_haxidf.svg',
 	},
@@ -101,15 +152,14 @@ export const Events = [
 		slugName: 'fun',
 		title: 'Fun',
 		description:
-			'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur',
+			'Fun events help to broaden the scope of the festival by providing a sense of excitement and enlightenment. We at NITRUSAV bring you a variety of fun events ranging from neon football to Mario for your enjoyment. Participating in enjoyable activities can also foster creativity and personal growth. Fun events are an important part of the festival because they bring together many people with a positive attitude and create a healthy environment in which to build.',
 		image:
 			'https://res.cloudinary.com/dujqfyato/image/upload/v1677910284/TART/Marble_sculpture_of_historical_figure_with_medical_mask_haxidf.svg',
 	},
 	{
 		slugName: 'workshops',
 		title: 'Workshops',
-		description:
-			'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur',
+		description: `Guest Lectures and Workshops are learning methods to polish a new skill or gain one. It is optimal opportunity to meet prominent personalities or creators who will come and may share their experiences which will be beneficial to all of us. Workshops provide learners with a new perspective and a different way of thinking and elaborating on issues. Prepare to witness such thrilling sessions that will leave no stone unturned in your quest to become professionals.`,
 		image:
 			'https://res.cloudinary.com/dujqfyato/image/upload/v1677910284/TART/Marble_sculpture_of_historical_figure_with_medical_mask_haxidf.svg',
 	},
@@ -117,7 +167,7 @@ export const Events = [
 		slugName: 'exhibitions',
 		title: 'Exhibitions',
 		description:
-			'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur',
+			'Exhibitions are not a mere display of artifacts but serve as a channel of communication between the art and the viewers. They quench the thirst for extensive knowledge while also raising the curiosity levels. Building out the connections in between and making yourself feel enlightened with art pieces and pictures is a complete different feel. Brace yourselves for some breath-taking exhibitions that are going to leave you spellbound.',
 		image:
 			'https://res.cloudinary.com/dujqfyato/image/upload/v1677910284/TART/Marble_sculpture_of_historical_figure_with_medical_mask_haxidf.svg',
 	},
@@ -185,6 +235,7 @@ export const INPUTS: (arg0: userData) => valueProps = ({
 		inputMode: 'select',
 		key: 'gender',
 		show: 'both',
+		optionValues: ['MALE', 'FEMALE', 'OTHERS'],
 		options: ['Male', 'Female', 'Prefer not to say'],
 		maxLength: 50,
 		minLength: 1,

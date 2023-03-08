@@ -13,7 +13,7 @@ const HeroSection: React.FC = () => {
 
 	const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
 		e.preventDefault();
-		user ? () => null : googleSignIn();
+		user && googleSignIn();
 	};
 
 	return (
@@ -28,7 +28,7 @@ const HeroSection: React.FC = () => {
 							filled
 							btnText={user ? 'View Profile' : 'Register Now'}
 							onClick={handleClick}
-							link={user ? '/profile' : ''}
+							link={user ? '/profile' : '/register'}
 						/>
 					</ButtonWrapper>
 				</Container>
