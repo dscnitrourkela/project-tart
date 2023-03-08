@@ -57,7 +57,7 @@ export const footer = {
 		title: 'NITRUTSAV 2023',
 		alt: 'logo',
 		about:
-			'INNOVISION, one of the largest techno-management fest in eastern India, aims at providing a stage for young budding minds to exhibit their talents. Our primary goal is to create awareness for great ideas that would help humanity and society.',
+			'NITRUTSAV, the Literary and Cultural Fest of NIT Rourkela works to give students a creative outlet to commemorate and introspectively explore their mind filled with ingenuity and innovation.',
 	},
 	ImpLinks: {
 		title: 'Quick Links',

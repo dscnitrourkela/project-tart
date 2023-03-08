@@ -65,7 +65,7 @@ export const EventWrapper = styled.div`
 flex
 flex-col
 md:w-[270px]
-content-center
+content-start
 gap-4
 `}
 `;
@@ -76,14 +76,7 @@ export const LogoWrapper = styled.div`
 	flex-row
     items-center 
     gap-2
-    mx-auto
  `};
-`;
-
-export const EventText = styled.div`
-	${tw`
-    pl-2
-`}
 `;
 
 export const ContentWrapper = styled.div`

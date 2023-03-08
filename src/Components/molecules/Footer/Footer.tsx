@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Body1, Body2 } from 'Components/atoms';
+import { Body1, Body2, Caption } from 'Components/atoms';
 import { footer } from 'Constants/Constants';
 import NU_logo from 'assets/NU_logo.svg';
 
@@ -17,7 +17,6 @@ import {
 	A,
 	Wrapper,
 	EventWrapper,
-	EventText,
 } from './styles';
 
 const Footer: React.FC = () => {
@@ -31,9 +30,8 @@ const Footer: React.FC = () => {
 								<Logo src={NU_logo} alt={footer.Logo.alt} />
 								<Body2 bold>{footer.Logo.title}</Body2>
 							</LogoWrapper>
-							<EventText>
-								<Body2>{footer.Logo.about}</Body2>
-							</EventText>
+
+							<Caption>{footer.Logo.about}</Caption>
 						</EventWrapper>
 
 						<ContentWrapper>
