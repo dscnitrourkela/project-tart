@@ -3,18 +3,38 @@ import { userData, valueProps } from './types';
 export const NavListItems = [
 	{
 		index: 1,
-		src: '#',
-		name: 'Events',
+		src: '/',
+		name: 'Home',
 	},
 	{
 		index: 2,
-		src: '#',
-		name: 'Events',
+		src: '/event/pro',
+		name: 'Pro Show',
 	},
 	{
 		index: 3,
-		src: '#',
-		name: 'Events',
+		src: '/',
+		name: 'Main',
+	},
+	{
+		index: 4,
+		src: '/',
+		name: 'Flagship',
+	},
+	{
+		index: 5,
+		src: '/',
+		name: 'Fun',
+	},
+	{
+		index: 6,
+		src: '/event/exhibitions',
+		name: 'Exhibition',
+	},
+	{
+		index: 7,
+		src: '/event/workshops',
+		name: 'Workshops',
 	},
 ];
 
