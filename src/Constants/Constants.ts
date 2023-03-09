@@ -1,4 +1,7 @@
-import { userData, valueProps } from './types';
+import {
+	userData,
+	valueProps,
+} from './types';
 
 export const NavListItems = [
 	{
@@ -8,23 +11,23 @@ export const NavListItems = [
 	},
 	{
 		index: 2,
+		src: '/event/flagship',
+		name: 'Flagship',
+	},
+	{
+		index: 3,
 		src: '/event/pro',
 		name: 'Pro Shows',
 	},
 	{
-		index: 3,
-		src: '/',
-		name: 'Main Events',
-	},
-	{
 		index: 4,
-		src: '/',
-		name: 'Flagship',
+		src: '/event/main',
+		name: 'Main',
 	},
 	{
 		index: 5,
-		src: '/',
-		name: 'Fun Events',
+		src: '/event/fun',
+		name: 'Fun',
 	},
 	{
 		index: 6,
@@ -169,6 +172,13 @@ export const Events = [
 		title: 'Workshops',
 		description: `Guest Lectures and Workshops are learning methods to polish a new skill or gain one. It is optimal opportunity to meet prominent personalities or creators who will come and may share their experiences which will be beneficial to all of us. Workshops provide learners with a new perspective and a different way of thinking and elaborating on issues. Prepare to witness such thrilling sessions that will leave no stone unturned in your quest to become professionals.`,
 		image: 'https://res.cloudinary.com/dnylc640l/image/upload/v1678310136/Nitrutsav-23/Categories/event1_wzny88.svg',
+	},
+	{
+		slugName: 'workshops',
+		title: 'Workshops',
+		description: `Guest Lectures and Workshops are learning methods to polish a new skill or gain one. It is optimal opportunity to meet prominent personalities or creators who will come and may share their experiences which will be beneficial to all of us. Workshops provide learners with a new perspective and a different way of thinking and elaborating on issues. Prepare to witness such thrilling sessions that will leave no stone unturned in your quest to become professionals.`,
+		image:
+			'https://res.cloudinary.com/dujqfyato/image/upload/v1677910284/TART/Marble_sculpture_of_historical_figure_with_medical_mask_haxidf.svg',
 	},
 ];
 

@@ -6,7 +6,8 @@ import { useQuery } from '@tanstack/react-query';
 
 import { EventData, EventProps, useEventHook } from './types';
 
-const fetchEvents = (event: string) => avenueApi.get('/events', { params: { type: event } });
+const fetchEvents = (event: string) =>
+	avenueApi.get('/events', { params: { type: event, orgID: '640892e9f785cdd0afcd8ccf' } });
 
 const useEvents = (event: string): useEventHook => {
 	const { data, isLoading } = useQuery({
