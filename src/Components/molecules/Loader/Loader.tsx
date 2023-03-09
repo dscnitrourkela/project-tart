@@ -18,8 +18,8 @@ const rotation = keyframes`
 const Spinner = styled.span`
 	width: 48px;
 	height: 48px;
-	border: 5px solid blue;
-	border-bottom-color: #ff3d00;
+	border: 5px solid #959595;
+	border-bottom-color: #170365;
 	border-radius: 50%;
 	display: inline-block;
 	animation: ${rotation} 1s linear infinite;

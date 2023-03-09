@@ -23,6 +23,7 @@ const Routes: React.FC = () => {
 					<Route exact path="/register" component={Register} />
 					<Route exact path="/profile" component={ProfilePage} />
 					<Route exact path="/txn-success" component={TxnSuccessScreen} />
+					<Route exact path="/loader" component={Loader} />
 					<Route exact path="*" component={PageNotFound} />
 				</Switch>
 				<Footer />
