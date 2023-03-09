@@ -6,7 +6,7 @@ import { Circle1, Circle2, Container, Head, Heading, Poster, RightCard, Title } 
 import { RegisteredEventProps } from './type';
 
 const ProfileCard: React.FC<{ event: RegisteredEventProps }> = ({ event }) => {
-	const { club, date, time, title, month, orgID, poster, prizes, venue } = event;
+	const { club, date, time, title, month, poster, prizes, venue } = event;
 
 	return (
 		<Container>

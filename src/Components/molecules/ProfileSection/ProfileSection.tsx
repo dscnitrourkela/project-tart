@@ -27,7 +27,7 @@ const ProfileSection: React.FC = () => {
 	const [registeredEvents, setRegisteredEvents] = React.useState<eventData[]>([]);
 	const [parsedEvents, setParsedEvents] = React.useState<RegisteredEventProps[]>([]);
 
-	const fetchUserEvents = async () => {
+	const fetchUserEvents = React.useCallback(async () => {
 		try {
 			const { data: eventList } = await avenueApi.get(`/user/registration`, {
 				params: {
@@ -63,11 +63,11 @@ const ProfileSection: React.FC = () => {
 		} catch (err) {
 			return null;
 		}
-	};
+	}, [registeredEvents, userData.id, accessToken]);
 
 	React.useEffect(() => {
 		fetchUserEvents();
-	}, [loading]);
+	}, [loading, fetchUserEvents]);
 
 	return (
 		<>
