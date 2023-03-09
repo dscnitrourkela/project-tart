@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 
-import { Footer, Navbar } from 'Components/molecules';
+import { Footer, Loader, Navbar } from 'Components/molecules';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const Homepage = React.lazy(() => import('Components/pages/Home'));
@@ -13,7 +13,7 @@ const TxnSuccessScreen = React.lazy(() => import('Components/pages/TxnSuccessScr
 
 const Routes: React.FC = () => {
 	return (
-		<Suspense fallback={<h1>Loading...</h1>}>
+		<Suspense fallback={<Loader />}>
 			<Router basename="/">
 				<Navbar />
 				<Switch>

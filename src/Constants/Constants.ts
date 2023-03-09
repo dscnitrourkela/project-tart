@@ -134,36 +134,42 @@ export const footer = {
 
 export const Events = [
 	{
-		slugName: 'technical',
-		title: 'Technical',
-		description: `The main events are the heart of Nitrutsav, they are planned accordingly to give minds surprising thoughts. It includes a wide range of cultural and literary events that shows the cultural legacy of Odisha, Some massive dance performances, club events, and acts that show the reality on the stage, a poetic glimpse and a day for love, and fashion-related events too that are worth experiencing.`,
-		image: 'https://res.cloudinary.com/dnylc640l/image/upload/v1678310146/Nitrutsav-23/Categories/event2_gnttjn.svg',
+		slugName: 'flagship',
+		title: 'Flagship Events',
+		description: `These events hold the highest substance in the fest, with maximum participation witnessed in each one. These events set the tone and create the vibe for the fest, showcasing the best talent and creativity on offer. The spotlight events of the fest shine bright with a colourful array of activities, showcasing the best of art, culture, music, dance, and theatre. From the foot-tapping beats of the Battle of Bands to the soulful melodies of Voice of NU, these events create a lively and vibrant atmosphere that's hard to resist. Whether it's the dramatic performances of Nukkad or the electrifying dance moves of Footloose, there's something for everyone.`,
+		image: 'https://res.cloudinary.com/dnylc640l/image/upload/v1678310137/Nitrutsav-23/Categories/event4_dhotvy.svg',
 	},
 	{
 		slugName: 'pro',
-		title: 'Pro Show',
+		title: 'Pro Shows',
 		description: `Nitrutsav presents an exclusive opportunity to break from the monotonous nexus of academia and is all set to instill exhilaration and verve in each one of you!! Come grab a friend or two, and experience the cardinal juncture of culture and innovation like never before!! Groove to your favourite music, by the musical maestros of your favourite bands, dance to the tunes of the best DJs, and savour the memories of laughing at the antics of the stand-up comedians. Boost your spirits, meet and interact with new people, and don't miss this once-in-a-lifetime opportunity to see the revered artists perform!!`,
 		image: 'https://res.cloudinary.com/dnylc640l/image/upload/v1678310141/Nitrutsav-23/Categories/event6_wurxsy.svg',
 	},
 	{
+		slugName: 'main',
+		title: 'Main Events',
+		description: `The main events are the heart of Nitrutsav, they are planned accordingly to give minds surprising thoughts. It includes a wide range of cultural and literary events that shows the cultural legacy of Odisha, Some massive dance performances, club events, and acts that show the reality on the stage, a poetic glimpse and a day for love, and fashion-related events too that are worth experiencing.`,
+		image: 'https://res.cloudinary.com/dnylc640l/image/upload/v1678310146/Nitrutsav-23/Categories/event2_gnttjn.svg',
+	},
+	{
 		slugName: 'fun',
-		title: 'Fun',
+		title: 'Fun Events',
 		description:
 			'Fun events help to broaden the scope of the festival by providing a sense of excitement and enlightenment. We at NITRUSAV bring you a variety of fun events ranging from neon football to Mario for your enjoyment. Participating in enjoyable activities can also foster creativity and personal growth. Fun events are an important part of the festival because they bring together many people with a positive attitude and create a healthy environment in which to build.',
 		image: 'https://res.cloudinary.com/dnylc640l/image/upload/v1678310154/Nitrutsav-23/Categories/event5_k8gqbr.svg',
-	},
-	{
-		slugName: 'workshops',
-		title: 'Workshops',
-		description: `Guest Lectures and Workshops are learning methods to polish a new skill or gain one. It is optimal opportunity to meet prominent personalities or creators who will come and may share their experiences which will be beneficial to all of us. Workshops provide learners with a new perspective and a different way of thinking and elaborating on issues. Prepare to witness such thrilling sessions that will leave no stone unturned in your quest to become professionals.`,
-		image: 'https://res.cloudinary.com/dnylc640l/image/upload/v1678310136/Nitrutsav-23/Categories/event1_wzny88.svg',
 	},
 	{
 		slugName: 'exhibitions',
 		title: 'Exhibitions',
 		description:
 			'Exhibitions are not a mere display of artifacts but serve as a channel of communication between the art and the viewers. They quench the thirst for extensive knowledge while also raising the curiosity levels. Building out the connections in between and making yourself feel enlightened with art pieces and pictures is a complete different feel. Brace yourselves for some breath-taking exhibitions that are going to leave you spellbound.',
-		image: 'https://res.cloudinary.com/dnylc640l/image/upload/v1678310152/Nitrutsav-23/Categories/event3_ncagvs.svg',
+		image: 'https://res.cloudinary.com/dnylc640l/image/upload/v1678340578/Nitrutsav-23/Categories/event7_pqurpl.svg',
+	},
+	{
+		slugName: 'workshops',
+		title: 'Workshops',
+		description: `Guest Lectures and Workshops are learning methods to polish a new skill or gain one. It is optimal opportunity to meet prominent personalities or creators who will come and may share their experiences which will be beneficial to all of us. Workshops provide learners with a new perspective and a different way of thinking and elaborating on issues. Prepare to witness such thrilling sessions that will leave no stone unturned in your quest to become professionals.`,
+		image: 'https://res.cloudinary.com/dnylc640l/image/upload/v1678310136/Nitrutsav-23/Categories/event1_wzny88.svg',
 	},
 ];
 
