@@ -114,12 +114,12 @@ export const footer = {
 	ImpLinks: {
 		title: 'Quick Links',
 		impLinks: [
-			{ text: 'FLAGSHIP EVENTS', href: 'flagship' },
-			{ text: 'PRO SHOWS', href: 'pro' },
-			{ text: 'MAIN EVENTS', href: 'main' },
-			{ text: 'FUN EVENTS', href: 'fun' },
-			{ text: 'EXHIBITIONS', href: 'exhibitions' },
-			{ text: 'WORKSHOPS', href: 'workshops' },
+			{ text: 'Flagship Events', href: 'flagship' },
+			{ text: 'Pro Shows', href: 'pro' },
+			{ text: 'Main Events', href: 'main' },
+			{ text: 'Fun Events', href: 'fun' },
+			{ text: 'Exhibitions', href: 'exhibitions' },
+			{ text: 'Workshops', href: 'workshops' },
 		],
 	},
 	Timings: {

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import NU_logo from 'assets/NU_logo.svg';
-import { Body1, Body2, Caption } from 'Components/atoms';
+import { Body1, Body2 } from 'Components/atoms';
 import { footer } from 'Constants/Constants';
 
 import {
@@ -9,6 +9,7 @@ import {
 	Container,
 	ContentWrapper,
 	CopyrightWrapper,
+	Description,
 	EventWrapper,
 	FooterWrapper,
 	Logo,
@@ -26,12 +27,12 @@ const Footer: React.FC = () => {
 				<FooterWrapper>
 					<PrimaryContainer>
 						<EventWrapper>
-							<LogoWrapper>
+							<LogoWrapper className="logo-wrap">
 								<Logo src={NU_logo} alt={footer.Logo.alt} />
 								<Body2 bold>{footer.Logo.title}</Body2>
 							</LogoWrapper>
 
-							<Caption>{footer.Logo.about}</Caption>
+							<Description>{footer.Logo.about}</Description>
 						</EventWrapper>
 
 						<ContentWrapper>
@@ -76,7 +77,9 @@ const Footer: React.FC = () => {
 					</SecondaryContainer>
 				</FooterWrapper>
 				<CopyrightWrapper className="">
-					<Body1 bold>{footer.CopyRight}</Body1>
+					<a href="https://www.dscnitrourkela.org/" target="_blank" rel="noreferrer">
+						<Body1 bold>{footer.CopyRight}</Body1>
+					</a>
 				</CopyrightWrapper>
 			</Container>
 		</Wrapper>
