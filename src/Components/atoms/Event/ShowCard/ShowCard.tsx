@@ -5,8 +5,12 @@ import { Body1, Body2, Button, ButtonText } from 'Components/atoms';
 import { BottomCard, Circle1, Circle2, Container, Poster, Title, TopCard, Venue } from './styles';
 import { CardProps } from './types';
 
-const ShowCard: React.FC<{ data: CardProps; onClick: () => void }> = ({ data, onClick }) => {
-	const { title, club, date, month, time, venue, poster } = data;
+const ShowCard: React.FC<{ data: CardProps; onClick: () => void; handleBook: (eventId: string) => Promise<void> }> = ({
+	data,
+	onClick,
+	handleBook,
+}) => {
+	const { title, club, date, month, time, venue, poster, id } = data;
 
 	return (
 		<Container>
@@ -24,7 +28,7 @@ const ShowCard: React.FC<{ data: CardProps; onClick: () => void }> = ({ data, on
 				<Circle2 />
 			</TopCard>
 			<BottomCard>
-				<Button btnText="Book Slots" fullWidth />
+				<Button btnText="Book Slots" fullWidth onClick={() => handleBook(id ?? '')} />
 				<ButtonText onClick={onClick}>Know More</ButtonText>
 			</BottomCard>
 		</Container>

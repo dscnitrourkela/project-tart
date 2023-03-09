@@ -23,6 +23,7 @@ const useEvents = (event: string): useEventHook => {
 				const date = new Date(event.startDate);
 
 				return {
+					id: event.id,
 					title: name.heading,
 					club: name.subHeading,
 					date: date.getDate(),

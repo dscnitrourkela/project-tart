@@ -2,30 +2,35 @@ import React from 'react';
 
 import { Body1, Button, Caption } from 'Components/atoms/';
 
-import { Circle1, Circle2, Container, DetailsText, Head, Heading, Poster, RightCard, Title } from './styles';
+import { Circle1, Circle2, Container, Head, Heading, Poster, RightCard, Title } from './styles';
+import { RegisteredEventProps } from './type';
 
-const ProfileCard: React.FC = () => {
+const ProfileCard: React.FC<{ event: RegisteredEventProps }> = ({ event }) => {
+	const { club, date, time, title, month, orgID, poster, prizes, venue } = event;
+
 	return (
 		<Container>
 			<RightCard>
 				<Head>
-					<Poster src="https://res.cloudinary.com/dujqfyato/image/upload/v1677924775/TART/Frame_586_ibkz1d.svg" />
+					<Poster src={poster} />
 					<div>
-						<Title bold>Euphony Live</Title>
-						<Caption bold>Euphony</Caption>
+						<Title bold>{title}</Title>
+						<Caption bold>{club}</Caption>
 					</div>
 				</Head>
 				<Body1 bold>
-					Venue : <Heading>LA LAWNS</Heading>
+					Venue : <Heading>{venue}</Heading>
 				</Body1>
 				<Body1 bold>
-					Time : <Heading>14:40, 13th Nov, March</Heading>
+					Time :{' '}
+					<Heading>
+						{time}, {date} {month}
+					</Heading>
 				</Body1>
 				<Body1 bold>
-					Prizes : <Heading>Worth 50k</Heading>
+					Prizes : <Heading>Worth {prizes}</Heading>
 				</Body1>
-				<Button fullWidth filled success btnText="Slots Booked" />
-				<DetailsText style={{ textAlign: 'center' }}>View Details</DetailsText>
+				<Button fullWidth filled btnText="Slot booked" success />
 				<Circle1 />
 				<Circle2 />
 			</RightCard>

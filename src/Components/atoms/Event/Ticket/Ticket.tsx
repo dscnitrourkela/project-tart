@@ -18,8 +18,12 @@ import {
 } from './styles';
 import { TicketProps } from './types';
 
-const Ticket: React.FC<{ data: TicketProps; onClick: () => void }> = ({ data, onClick }) => {
-	const { title, venue, club, time, date, month, prizes, description, contact, poster } = data;
+const Ticket: React.FC<{ data: TicketProps; onClick: () => void; handleBook: (eventId: string) => Promise<void> }> = ({
+	data,
+	onClick,
+	handleBook,
+}) => {
+	const { title, venue, club, time, date, month, prizes, description, contact, poster, id } = data;
 
 	return (
 		<Container>
@@ -60,7 +64,7 @@ const Ticket: React.FC<{ data: TicketProps; onClick: () => void }> = ({ data, on
 				<Body1 bold>
 					Prizes : <Heading>Worth {prizes}</Heading>
 				</Body1>
-				<Button fullWidth filled btnText="Book Slots" />
+				<Button fullWidth filled btnText="Book Slots" onClick={() => handleBook(id ?? '')} />
 				<Circle1 />
 				<Circle2 />
 			</RightCard>

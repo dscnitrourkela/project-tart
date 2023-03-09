@@ -6,4 +6,5 @@ export interface CardProps {
 	date: string;
 	month: string;
 	time: string;
+	id?: string;
 }
