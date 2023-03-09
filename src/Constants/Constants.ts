@@ -124,8 +124,8 @@ export const footer = {
 	},
 	Timings: {
 		title: 'Opening Hours',
-		weekends: 'Timings',
-		weekdays: 'Timings',
+		weekends: '08:00 - 22:00',
+		weekdays: '11:00 - 20:00',
 	},
 
 	CopyRight: 'Designed and Developed with 💙 by GDSC NIT, Rourkela',
