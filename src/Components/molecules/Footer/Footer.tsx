@@ -57,20 +57,20 @@ const Footer: React.FC = () => {
 							</Span>
 							<Span>
 								<Body2 bold>Saturday,Sunday:</Body2>
-								<Body2 style={{ lineHeight: '2em' }}>{footer.Timings.weekdays}</Body2>
+								<Body2 style={{ lineHeight: '2em' }}>{footer.Timings.weekends}</Body2>
 							</Span>
 						</ContentWrapper>
 						<ContentWrapper>
 							<Body1 bold style={{ marginBottom: '1em' }}>
-								{footer.Timings.title}
+								Contact us:
 							</Body1>
 							<Span>
-								<Body2 bold>Weekdays:</Body2>
-								<Body2 style={{ lineHeight: '1.5em' }}>{footer.Timings.weekdays}</Body2>
+								<Body2 bold>Ashish:</Body2>
+								<Body2 style={{ lineHeight: '1.5em' }}>9078240859</Body2>
 							</Span>
 							<Span>
-								<Body2 bold>Saturday,Sunday:</Body2>
-								<Body2 style={{ lineHeight: '2em' }}>{footer.Timings.weekdays}</Body2>
+								<Body2 bold>Dibyani:</Body2>
+								<Body2 style={{ lineHeight: '2em' }}>8144933165</Body2>
 							</Span>
 						</ContentWrapper>
 					</SecondaryContainer>
