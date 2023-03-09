@@ -45,6 +45,7 @@ export const NavBar = styled.header<MobileNavProps>`
 	}
 
 	.btn__container {
+		cursor: pointer;
 		@media (min-width: 680px) {
 			top: 20px;
 		}
