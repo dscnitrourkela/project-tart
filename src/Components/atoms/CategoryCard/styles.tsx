@@ -7,7 +7,7 @@ import Heading3 from '../Typography/Heading3';
 export const PopImage = styled.img`
 	position: absolute;
 	left: 10%;
-	top: 0%;
+	top: 20%;
 	transition: transform 500ms;
 	z-index: -9;
 	transform: translateY(-10px);
@@ -74,6 +74,7 @@ origin-left
 `;
 
 export const DescriptionBox = styled.div`
+	border-radius: 0 0 12px 12px;
 	${tw`
 flex
 flex-col
@@ -139,26 +140,6 @@ export const Container = styled.div`
 	&:hover ${PopImage} {
 		z-index: 99;
 		transform: translateY(-200px);
-	}
-	&:hover ${Clapup} {
-		background: #03016b;
-	}
-	&:hover ${Clapdown} {
-		background: #03016b;
-	}
-	&:hover ${UpSpan} {
-		background: #fff;
-	}
-	&:hover ${DownSpan} {
-		background: #fff;
-	}
-	&:hover ${DescriptionBox} {
-		background: #03016b;
-	}
-	&:hover ${ButtonText} {
-		-webkit-text-fill-color: #fff;
-	}
-	&:hover ${Description} {
-		visibility: hidden;
+		top: 0;
 	}
 `;

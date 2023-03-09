@@ -5,6 +5,9 @@ import { DisplayProps } from './types';
 
 const grow = keyframes`
   0% { height: 0; }
+  25% { height: 25%; }
+  50% { height: 50%; }
+  75% { height: 75%; }
   100% { height: auto; }
 `;
 
@@ -19,6 +22,7 @@ export const Container = styled.div<DisplayProps>`
     rounded
     bg-background-secondary
     md:px-6
+    cursor-pointer
   `}
 `;
 export const Question = styled.div<DisplayProps>`
