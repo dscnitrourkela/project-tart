@@ -62,12 +62,12 @@ export const SecondaryContainer = styled.div`
 
 export const EventWrapper = styled.div`
 	${tw`
-flex
-flex-col
-md:w-[270px]
-content-start
-gap-4
-`}
+    flex
+    flex-col
+    md:w-[270px]
+    content-start
+    gap-4
+    `}
 `;
 export const LogoWrapper = styled.div`
 	${tw`
@@ -77,6 +77,10 @@ export const LogoWrapper = styled.div`
     items-center 
     gap-2
  `};
+	justify-content: flex-start;
+	@media (max-width: 512px) {
+		justify-content: center;
+	}
 `;
 
 export const ContentWrapper = styled.div`
@@ -103,13 +107,30 @@ export const A = styled.a`
  `};
 `;
 
+export const Description = styled.p`
+	font-weight: 300;
+	font-size: 14px;
+	text-align: left;
+	${tw`
+      text-color-primary
+      leading-4.5
+      sm:leading-5
+    `}
+	@media(max-width: 512px) {
+		font-size: 12px;
+		text-align: center;
+	}
+`;
+
 export const CopyrightWrapper = styled.div`
 	${tw`
-flex 
-text-center
-justify-center
-px-12
-`};
+    flex 
+    flex-row
+    md:flex-col
+    text-center
+    justify-center
+    px-12
+    `};
 `;
 
 export const Logo = styled.img`
