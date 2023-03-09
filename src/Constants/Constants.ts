@@ -1,7 +1,4 @@
-import {
-	userData,
-	valueProps,
-} from './types';
+import { userData, valueProps } from './types';
 
 export const NavListItems = [
 	{
