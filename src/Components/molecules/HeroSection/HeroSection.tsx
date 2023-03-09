@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 
 import { Button } from 'Components/atoms';
 import useMediaQuery from 'Hooks/useMediaQuery';
@@ -9,12 +9,19 @@ import { ButtonWrapper, Container, Img, SectionContainer } from './styles';
 
 const HeroSection: React.FC = () => {
 	const isMobileView = useMediaQuery('(max-width: 544px)');
-	const { user } = useContext(AuthContext);
+	const { user, userData, loading } = useContext(AuthContext);
+	const [registered, setRegistered] = React.useState(false);
 
 	const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
 		e.preventDefault();
-		user && googleSignIn();
+		!user && googleSignIn();
 	};
+
+	useEffect(() => {
+		if (loading === false && userData.festID?.includes('nitrutsav-2023')) {
+			setRegistered(true);
+		}
+	}, [loading, userData]);
 
 	return (
 		<>
@@ -26,9 +33,9 @@ const HeroSection: React.FC = () => {
 						<Button
 							fullWidth={isMobileView}
 							filled
-							btnText={user ? 'View Profile' : 'Register Now'}
+							btnText={registered ? 'View Profile' : 'Register Now'}
 							onClick={handleClick}
-							link={user ? '/profile' : '/register'}
+							link={registered ? '/profile' : '/register'}
 						/>
 					</ButtonWrapper>
 				</Container>

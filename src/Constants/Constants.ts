@@ -8,23 +8,23 @@ export const NavListItems = [
 	},
 	{
 		index: 2,
+		src: '/event/flagship',
+		name: 'Flagship',
+	},
+	{
+		index: 3,
 		src: '/event/pro',
 		name: 'Pro Shows',
 	},
 	{
-		index: 3,
-		src: '/',
-		name: 'Main Events',
-	},
-	{
 		index: 4,
-		src: '/',
-		name: 'Flagship',
+		src: '/event/main',
+		name: 'Main',
 	},
 	{
 		index: 5,
-		src: '/',
-		name: 'Fun Events',
+		src: '/event/fun',
+		name: 'Fun',
 	},
 	{
 		index: 6,

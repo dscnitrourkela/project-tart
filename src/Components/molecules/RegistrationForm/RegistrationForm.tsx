@@ -8,6 +8,7 @@ import { valueProps } from 'Constants/types';
 import { toast } from 'react-toastify';
 import { avenueApi } from 'utils/api';
 import { AuthContext } from 'utils/AuthContext';
+import getURLparameter from 'utils/getURLParameter';
 
 import { ButtonContainer, Form, Wrapper } from './styles';
 
@@ -16,6 +17,36 @@ const RegistrationForm: React.FC = () => {
 	const [values, setValues] = React.useState(INPUTS(userData));
 	const [stage, setStage] = React.useState(STAGES.TYPE_OF_USER);
 	const [verified, setVerified] = React.useState(false);
+
+	useEffect(() => {
+		const paymentStatus = getURLparameter('payment_status');
+		const paymentId = getURLparameter('payment_id');
+		const paymentRequestId = getURLparameter('payment_request_id');
+
+		if (paymentStatus === 'Credit' && paymentId && paymentRequestId) {
+			toast.success('Payment Successful');
+			window.location.assign('/profile');
+		} else if (paymentStatus === 'Failed') {
+			toast.error('Payment Failed');
+		}
+	}, []);
+
+	useEffect(() => {
+		const paymentStatus = getURLparameter('paymentStatus');
+
+		if (paymentStatus === 'credit') {
+			toast.success('Payment Successful');
+			window.location.assign('/profile');
+		}
+
+		if (userData?.id) {
+			if (userData?.rollNumber) {
+				window.location.assign('/profile');
+			} else if (userData?.festID?.includes('nitrutsav-2023')) {
+				window.location.assign('/profile');
+			}
+		}
+	}, [userData]);
 
 	useEffect(() => {
 		setValues(INPUTS(userData));
@@ -62,8 +93,8 @@ const RegistrationForm: React.FC = () => {
 					buyerName: values.name.value,
 					email: values.email.value,
 					phone: values.mobile.value,
-					// redirectUrl: 'https://nitrutsav.live/register',
-					redirectUrl: 'http://localhost:3000/register',
+					redirectUrl: 'https://nitrutsav.live/register',
+					// redirectUrl: 'http://localhost:3000/register',
 					webhook: 'https://avenue-api.nitrkl.in/payment/webhook',
 				},
 				{
