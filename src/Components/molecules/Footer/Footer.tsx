@@ -1,22 +1,22 @@
 import React from 'react';
 
+import NU_logo from 'assets/NU_logo.svg';
 import { Body1, Body2, Caption } from 'Components/atoms';
 import { footer } from 'Constants/Constants';
-import NU_logo from 'assets/NU_logo.svg';
 
 import {
+	A,
 	Container,
 	ContentWrapper,
 	CopyrightWrapper,
+	EventWrapper,
 	FooterWrapper,
 	Logo,
 	LogoWrapper,
 	PrimaryContainer,
 	SecondaryContainer,
 	Span,
-	A,
 	Wrapper,
-	EventWrapper,
 } from './styles';
 
 const Footer: React.FC = () => {
@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
 								{footer.ImpLinks.title}
 							</Body1>
 							{footer.ImpLinks.impLinks.map((Link, key) => (
-								<A href={Link.href} target="_blank" key={key}>
+								<A href={`/event/${Link.href}`} target="_blank" key={key}>
 									<Body2 style={{ lineHeight: '1.5em' }}>{Link.text}</Body2>
 								</A>
 							))}
