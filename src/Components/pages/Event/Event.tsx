@@ -57,7 +57,7 @@ const EventPage: React.FC = () => {
 	};
 
 	useEffect(() => {
-		if (userData?.festID?.includes('nitrutsav-2023')) {
+		if (userData?.festID?.includes('nitrutsav-2023') || userData?.rollNumber) {
 			setDisabled(false);
 		}
 	}, [userData]);
