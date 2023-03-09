@@ -1,4 +1,4 @@
-export interface TicketProps {
+export interface TicketDataProps {
 	title: string;
 	club: string;
 	venue: string;

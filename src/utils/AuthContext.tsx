@@ -53,6 +53,10 @@ const AuthContextProvider: React.FC<{ children: React.ReactNode }> = ({ children
 					toast.error((error ?? 'Something went wrong!') as string);
 				}
 			})();
+
+			if (!user) {
+				setUserData({});
+			}
 		});
 
 		return _cancelSubscription;
