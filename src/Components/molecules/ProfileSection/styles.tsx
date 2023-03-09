@@ -33,6 +33,7 @@ export const InfoContainer = styled.fieldset`
     rounded-2xl
     border-black
     border-[1px]
+    cursor-default
 `}
 `;
 

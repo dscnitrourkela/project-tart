@@ -32,7 +32,7 @@ const RegistrationForm: React.FC = () => {
 	}, []);
 
 	useEffect(() => {
-		const paymentStatus = getURLparameter('paymentStatus');
+		const paymentStatus = getURLparameter('payment_status');
 
 		if (paymentStatus === 'credit') {
 			toast.success('Payment Successful');

@@ -15,4 +15,5 @@ export interface TicketProps {
 		phone: string;
 	}[];
 	poster: string;
+	id?: string;
 }
