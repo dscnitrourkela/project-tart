@@ -57,7 +57,7 @@ export const AboutContent = {
 	mind.This time with the theme of "An Indian Filmic Fete", this 
 	impeccable beauty will mesmerise right through the windows of your 
 	soul.`,
-	trailerLink: 'https://www.youtube.com/embed/AY1Hxf5_hiE',
+	trailerLink: 'https://www.youtube.com/embed/lbIV_6hfeYU',
 };
 
 export const FAQs = [
