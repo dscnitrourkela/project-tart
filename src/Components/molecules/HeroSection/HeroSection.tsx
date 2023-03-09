@@ -18,7 +18,7 @@ const HeroSection: React.FC = () => {
 	};
 
 	useEffect(() => {
-		if (loading === false && userData.festID?.includes('nitrutsav-2023')) {
+		if (loading === false && (userData.festID?.includes('nitrutsav-2023') || userData?.rollNumber)) {
 			setRegistered(true);
 		}
 	}, [loading, userData]);
