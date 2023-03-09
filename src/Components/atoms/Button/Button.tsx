@@ -53,13 +53,19 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
 	const history = useHistory();
 
+	const handleLink = (e: React.MouseEvent<HTMLButtonElement>) => {
+		e.preventDefault();
+		if (onClick) onClick(e);
+		if (link) history.push(link);
+	};
+
 	return (
 		<div>
 			<Wrapper
 				filled={filled}
 				success={success}
 				fullWidth={fullWidth}
-				onClick={link ? () => history.push(link) : onClick}
+				onClick={link ? handleLink : onClick}
 				aria-disabled={disabled}
 				disabled={disabled}>
 				{

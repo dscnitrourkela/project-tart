@@ -26,8 +26,8 @@ const MobileNav: React.FC = () => {
 						</LogoWrapper>
 					</a>
 
-					<div className="btn__container">
-						<MenuButton onClick={toggleMenuIsOpen} menuIsOpen={menuIsOpen}>
+					<div onClick={toggleMenuIsOpen} className="btn__container">
+						<MenuButton menuIsOpen={menuIsOpen}>
 							<span className="menu_burger" />
 						</MenuButton>
 					</div>

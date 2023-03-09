@@ -8,23 +8,23 @@ export const NavListItems = [
 	},
 	{
 		index: 2,
+		src: '/event/flagship',
+		name: 'Flagship',
+	},
+	{
+		index: 3,
 		src: '/event/pro',
 		name: 'Pro Shows',
 	},
 	{
-		index: 3,
-		src: '/',
-		name: 'Main Events',
-	},
-	{
 		index: 4,
-		src: '/',
-		name: 'Flagship',
+		src: '/event/main',
+		name: 'Main',
 	},
 	{
 		index: 5,
-		src: '/',
-		name: 'Fun Events',
+		src: '/event/fun',
+		name: 'Fun',
 	},
 	{
 		index: 6,
@@ -57,7 +57,7 @@ export const AboutContent = {
 	mind.This time with the theme of "An Indian Filmic Fete", this 
 	impeccable beauty will mesmerise right through the windows of your 
 	soul.`,
-	trailerLink: 'https://www.youtube.com/embed/AY1Hxf5_hiE',
+	trailerLink: 'https://www.youtube.com/embed/lbIV_6hfeYU',
 };
 
 export const FAQs = [

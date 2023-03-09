@@ -18,14 +18,13 @@ const FAQ: React.FC<FAQProps> = ({ question = '', answer = '' }) => {
 	}, [answered, setDisplay]);
 
 	return (
-		<Container>
+		<Container
+			onClick={() => {
+				setAnswered(!answered);
+			}}>
 			<Question answered={answered} $display={display}>
 				<Body2 bold>{question}</Body2>
-				<FAQButton
-					answered={answered}
-					onClick={() => {
-						setAnswered(!answered);
-					}}>
+				<FAQButton answered={answered}>
 					<img height="auto" width="100%" src="FAQ_arrow.svg" />
 				</FAQButton>
 			</Question>

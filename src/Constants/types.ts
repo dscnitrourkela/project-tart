@@ -49,4 +49,5 @@ export interface userData {
 	college?: string;
 	stream?: string;
 	rollNumber?: string;
+	festID?: string;
 }

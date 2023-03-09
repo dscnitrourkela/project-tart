@@ -31,7 +31,6 @@ const Card: React.FC<CategoryCardProps> = ({ title, description, image, link }) 
 				<Container
 					onMouseOver={() => {
 						setRotorColor('#03016B');
-						setArrowColor('#fff');
 					}}
 					onMouseOut={() => {
 						setRotorColor('#ACACAC');
