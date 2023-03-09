@@ -1,19 +1,22 @@
 import React from 'react';
 
 import { Ticket } from 'Components/atoms/Event';
-import { TicketProps } from 'Components/atoms/Event/Ticket/types';
+import { TicketDataProps } from 'Components/atoms/Event/Ticket/types';
 
 import { BackDrop } from './styles';
 
-const Modal: React.FC<{ data: TicketProps; onClick: () => void; handleBook: (eventId: string) => Promise<void> }> = ({
-	data,
-	onClick,
-	handleBook,
-}) => {
+interface modalProps {
+	data: TicketDataProps;
+	onClick: () => void;
+	handleBook: (eventId: string) => Promise<void>;
+	disabled?: boolean;
+}
+
+const Modal: React.FC<modalProps> = ({ data, onClick, handleBook, disabled = true }) => {
 	return (
 		<>
 			<BackDrop onClick={onClick}>
-				<Ticket data={data} onClick={onClick} handleBook={handleBook} />
+				<Ticket data={data} onClick={onClick} handleBook={handleBook} disabled={disabled} />
 			</BackDrop>
 		</>
 	);

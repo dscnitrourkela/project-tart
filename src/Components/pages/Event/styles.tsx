@@ -22,4 +22,5 @@ export const ShowsWrapper = styled.div`
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 36px 24px;
+	overflow-x: hidden;
 `;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { ShowCard } from 'Components/atoms/Event';
 import { EventHero, Modal } from 'Components/molecules/Event';
@@ -17,6 +17,7 @@ const EventPage: React.FC = () => {
 
 	const [modal, setModal] = useState(false);
 	const [eventIndex, setEventIndex] = useState(0);
+	const [disabled, setDisabled] = useState(true);
 	const handleClick = (index: number) => {
 		setEventIndex(index);
 		setModal(true);
@@ -51,18 +52,32 @@ const EventPage: React.FC = () => {
 				toast.error('Event registration failed');
 			}
 		} catch (err) {
-			toast.error((err as Error).message);
+			toast.error('User not registered currently');
 		}
 	};
 
+	useEffect(() => {
+		if (userData?.festID?.includes('nitrutsav-2023')) {
+			setDisabled(false);
+		}
+	}, [userData]);
+
 	return (
 		<>
-			{modal && <Modal data={events[eventIndex]} onClick={handleClose} handleBook={handleBook} />}
+			{modal && <Modal data={events[eventIndex]} onClick={handleClose} handleBook={handleBook} disabled={disabled} />}
 			<Container isModalOpen={modal}>
 				<EventHero title={title} description={description} image={image} />
 				<ShowsWrapper>
 					{events?.map((event, index) => {
-						return <ShowCard key={index} data={event} onClick={() => handleClick(index)} handleBook={handleBook} />;
+						return (
+							<ShowCard
+								key={index}
+								data={event}
+								onClick={() => handleClick(index)}
+								handleBook={handleBook}
+								disabled={disabled}
+							/>
+						);
 					})}
 				</ShowsWrapper>
 			</Container>

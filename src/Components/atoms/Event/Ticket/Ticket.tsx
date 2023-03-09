@@ -16,13 +16,16 @@ import {
 	Title,
 	X,
 } from './styles';
-import { TicketProps } from './types';
+import { TicketDataProps } from './types';
 
-const Ticket: React.FC<{ data: TicketProps; onClick: () => void; handleBook: (eventId: string) => Promise<void> }> = ({
-	data,
-	onClick,
-	handleBook,
-}) => {
+interface TicketProps {
+	data: TicketDataProps;
+	onClick: () => void;
+	handleBook: (eventId: string) => Promise<void>;
+	disabled?: boolean;
+}
+
+const Ticket: React.FC<TicketProps> = ({ data, onClick, handleBook, disabled = true }) => {
 	const { title, venue, club, time, date, month, prizes, description, contact, poster, id } = data;
 
 	return (
@@ -64,7 +67,7 @@ const Ticket: React.FC<{ data: TicketProps; onClick: () => void; handleBook: (ev
 				<Body1 bold>
 					Prizes : <Heading>Worth {prizes}</Heading>
 				</Body1>
-				<Button fullWidth filled btnText="Book Slots" onClick={() => handleBook(id ?? '')} />
+				<Button fullWidth filled btnText="Book Slots" onClick={() => handleBook(id ?? '')} disabled={disabled} />
 				<Circle1 />
 				<Circle2 />
 			</RightCard>
