@@ -30,7 +30,7 @@ const MobileNavListComp: React.FC<MobileNavProps> = () => {
 		<MobileViewList>
 			<MobileNavList>
 				{NavListItems.map((item) => (
-					<a href="{item.src}" key={item.index}>
+					<a href={item.src} key={item.index}>
 						<MobileNavItem>
 							<Body1>{item.name}</Body1>
 						</MobileNavItem>

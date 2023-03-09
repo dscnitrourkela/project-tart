@@ -33,7 +33,7 @@ const useEvents = (event: string): useEventHook => {
 					prizes: name.prizeAmount,
 					poster: event.poster
 						? event.poster
-						: 'https://res.cloudinary.com/dujqfyato/image/upload/v1677924775/TART/Frame_586_ibkz1d.svg',
+						: 'https://res.cloudinary.com/dnylc640l/image/upload/v1678370238/Nitrutsav-23/Events/TBA.jpg',
 					// poster: 'https://res.cloudinary.com/dujqfyato/image/upload/v1677924775/TART/Frame_586_ibkz1d.svg',
 				};
 			})
