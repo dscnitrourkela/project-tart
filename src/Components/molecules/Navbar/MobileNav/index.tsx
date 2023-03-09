@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
 
-import { useHistory } from 'react-router-dom';
+import NU_logo from 'assets/NU_logo.svg';
 
 import { LogoImage, LogoText, LogoWrapper } from '../styles';
 import MobileNavList from './MobileNavList/MobileNavList';
 import { MenuButton, NavBar } from './styles';
-import NU_logo from 'assets/NU_logo.svg';
 
 const MobileNav: React.FC = () => {
 	const [menuIsOpen, setMenuIsOpen] = useState(false);
-	const history = useHistory();
 
 	const toggleMenuIsOpen = () => (menuIsOpen ? setMenuIsOpen(false) : setMenuIsOpen(true));
 
@@ -17,18 +15,16 @@ const MobileNav: React.FC = () => {
 		toggleMenuIsOpen();
 	};
 
-	const handleLogoClick = () => {
-		history.push('/');
-	};
-
 	return (
 		<NavBar menuIsOpen={menuIsOpen}>
 			<div>
 				<nav className="mobileNavWrapper">
-					<LogoWrapper onClick={handleLogoClick}>
-						<LogoImage src={NU_logo} alt="NU" />
-						<LogoText>NITRUTSAV 2023</LogoText>
-					</LogoWrapper>
+					<a href="/">
+						<LogoWrapper>
+							<LogoImage src={NU_logo} alt="NU" />
+							<LogoText>NITRUTSAV 2023</LogoText>
+						</LogoWrapper>
+					</a>
 
 					<div className="btn__container">
 						<MenuButton onClick={toggleMenuIsOpen} menuIsOpen={menuIsOpen}>
