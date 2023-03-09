@@ -31,8 +31,10 @@ const useEvents = (event: string): useEventHook => {
 					description: description,
 					venue: 'LA',
 					prizes: name.prizeAmount,
-					// poster: event.poster
-					poster: 'https://res.cloudinary.com/dujqfyato/image/upload/v1677924775/TART/Frame_586_ibkz1d.svg',
+					poster: event.poster
+						? event.poster
+						: 'https://res.cloudinary.com/dujqfyato/image/upload/v1677924775/TART/Frame_586_ibkz1d.svg',
+					// poster: 'https://res.cloudinary.com/dujqfyato/image/upload/v1677924775/TART/Frame_586_ibkz1d.svg',
 				};
 			})
 			.sort((a: EventProps, b: EventProps) => +a.date - +b.date);
