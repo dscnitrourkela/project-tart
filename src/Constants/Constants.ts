@@ -9,7 +9,7 @@ export const NavListItems = [
 	{
 		index: 2,
 		src: '/event/flagship',
-		name: 'Flagship',
+		name: 'Flagship Events',
 	},
 	{
 		index: 3,
@@ -19,12 +19,12 @@ export const NavListItems = [
 	{
 		index: 4,
 		src: '/event/main',
-		name: 'Main',
+		name: 'Main Events',
 	},
 	{
 		index: 5,
 		src: '/event/fun',
-		name: 'Fun',
+		name: 'Fun Events',
 	},
 	{
 		index: 6,
