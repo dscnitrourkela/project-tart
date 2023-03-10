@@ -19,7 +19,7 @@ export const ProfileContainer = styled.div`
     lg:gap-x-[40px]
     lg:gap-y-[46px]
     lg:mt-12
-    mb-[86px]
+    mb-[20px]
     gap-y-4
     grid-cols-1
     mt-8
@@ -69,10 +69,11 @@ export const RightCard = styled.div`
     flex-col
     gap-6
     relative
-    h-fit
-    w-fit
-    // sm:h-[350px]
-    // md:h-full
+    w-full
+    h-[330px]
+    sm:h-[384px]
+    md:w-[350px]
+    md:h-full
     md:p-6
     md:pl-12
   `}
@@ -93,16 +94,16 @@ export const Head = styled.div`
 export const Poster = styled.img`
 	${tw`
 		w-[72px]
-        h-auto
-        md:w-[72px]
+    h-auto
+    md:w-[72px]
 	`}
 `;
 
 export const Title = styled(Heading4)`
 	${tw`
     truncate
-    max-w-[210px]
-    sm:max-w-[250px]
+    max-w-[150px]
+    sm:max-w-[180px]
   `}
 `;
 
@@ -162,25 +163,15 @@ export const Btn = styled(Button)`
 `;
 
 export const Grid = styled.div`
-	display: grid;
-	place-items: center;
-	grid-template-columns: repeat(3, 1fr);
-
-	@media (max-width: 1200px) {
-		grid-template-columns: repeat(2, 1fr);
-	}
-
-	@media (max-width: 544px) {
-		grid-template-columns: repeat(1, 1fr);
-	}
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
 `;
 
-export const DetailsText = styled.p`
-	font-family: 'Poppins';
-	font-style: normal;
-	font-weight: 500;
-	font-size: 16px;
-	letter-spacing: 0.02em;
-	text-transform: capitalize;
-	color: #000000;
+export const EventContainer = styled.div`
+	max-width: 1200px;
+	margin: 40px auto;
+	padding: 0 20px;
 `;

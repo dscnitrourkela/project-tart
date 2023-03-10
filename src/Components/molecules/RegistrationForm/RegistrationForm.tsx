@@ -13,10 +13,14 @@ import getURLparameter from 'utils/getURLParameter';
 import { ButtonContainer, Form, Wrapper } from './styles';
 
 const RegistrationForm: React.FC = () => {
-	const { user, userData, setUserData, accessToken } = React.useContext(AuthContext);
+	const { user, userData, setUserData, accessToken, loading } = React.useContext(AuthContext);
 	const [values, setValues] = React.useState(INPUTS(userData));
 	const [stage, setStage] = React.useState(STAGES.TYPE_OF_USER);
 	const [verified, setVerified] = React.useState(false);
+
+	useEffect(() => {
+		if (!user && !loading) window.location.assign('/');
+	}, [user, loading]);
 
 	useEffect(() => {
 		const paymentStatus = getURLparameter('payment_status');

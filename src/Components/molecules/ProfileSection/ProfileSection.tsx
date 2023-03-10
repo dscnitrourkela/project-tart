@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-import { Body2, Heading2 } from 'Components/atoms/';
+import { Body2, Button, Heading2 } from 'Components/atoms/';
+import { useHistory } from 'react-router';
 import { avenueApi } from 'utils/api';
 import { AuthContext } from 'utils/AuthContext';
+import { signout } from 'utils/userAuth';
 
 import ProfileCard from './ProfileCard';
-import { Grid, InfoContainer, InfoHeader, Profile, ProfileContainer } from './styles';
+import { EventContainer, Grid, InfoContainer, InfoHeader, Profile, ProfileContainer } from './styles';
 import { RegisteredEventProps } from './type';
 
 const profileInfo = ['Name', 'Email', 'College', 'City', 'State'];
@@ -23,9 +25,26 @@ interface eventData {
 }
 
 const ProfileSection: React.FC = () => {
-	const { userData, loading, accessToken } = React.useContext(AuthContext);
+	const { userData, loading, accessToken, user } = React.useContext(AuthContext);
 	const [registeredEvents, setRegisteredEvents] = React.useState<eventData[]>([]);
 	const [parsedEvents, setParsedEvents] = React.useState<RegisteredEventProps[]>([]);
+	const history = useHistory();
+
+	const handleLogout = (e: React.MouseEvent<HTMLButtonElement>) => {
+		e.preventDefault();
+		if (user) {
+			signout();
+			history.push('/');
+		}
+	};
+
+	useEffect(() => {
+		if (!user && !loading) {
+			history.push('/');
+		} else if (!userData?.festID?.includes('nitrutsav-2023') && !userData?.rollNumber && !loading) {
+			history.push('/register');
+		}
+	}, [userData, loading, history, user]);
 
 	const fetchUserEvents = React.useCallback(async () => {
 		try {
@@ -77,17 +96,20 @@ const ProfileSection: React.FC = () => {
 					{profileInfo.map((key) => (
 						<InfoContainer key={key}>
 							<InfoHeader>{key}</InfoHeader>
-							<Body2>{userData[key.toLowerCase() as keyof typeof userData]}</Body2>
+							<Body2>{userData[key.toLowerCase() as keyof typeof userData] ?? 'NA'}</Body2>
 						</InfoContainer>
 					))}
 				</ProfileContainer>
-				<Heading2 bold>Registered Events</Heading2>
+				<Button btnText="LOGOUT" filled onClick={handleLogout} />
 			</Profile>
-			<Grid>
-				{parsedEvents.map((event: RegisteredEventProps) => (
-					<ProfileCard key={event.title} event={event} />
-				))}
-			</Grid>
+			<EventContainer>
+				<Heading2 bold>Registered Events</Heading2>
+				<Grid>
+					{parsedEvents.map((event: RegisteredEventProps) => (
+						<ProfileCard key={event.title} event={event} />
+					))}
+				</Grid>
+			</EventContainer>
 		</>
 	);
 };
