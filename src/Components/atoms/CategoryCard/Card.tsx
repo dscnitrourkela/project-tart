@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { ReactComponent as rotor } from 'assets/Rotor.svg';
 import { ReactComponent as arrow } from 'assets/Vector.svg';
@@ -22,9 +22,6 @@ import {
 import { CategoryCardProps } from './types';
 
 const Card: React.FC<CategoryCardProps> = ({ title, description, image, link }) => {
-	const [rotorColor, setRotorColor] = useState<string>('#ACACAC');
-	const [arrowColor, setArrowColor] = useState<string>('#03016B');
-
 	return (
 		<React.Fragment>
 			<a href={`/event/${link}`}>
@@ -32,7 +29,7 @@ const Card: React.FC<CategoryCardProps> = ({ title, description, image, link }) 
 					<Clap>
 						<PopImage src={image} alt={`${title} Category`} />
 						<Rotor>
-							<SVGIcon Icon={rotor} color={rotorColor} />
+							<SVGIcon Icon={rotor} color="#ACACAC" />
 						</Rotor>
 						<Clapup>
 							{Array(10)
@@ -54,7 +51,7 @@ const Card: React.FC<CategoryCardProps> = ({ title, description, image, link }) 
 						<Link>
 							<ButtonText>{title}</ButtonText>
 							<ButtonIcon>
-								<SVGIcon Icon={arrow} color={arrowColor} />
+								<SVGIcon Icon={arrow} color="#03016B" />
 							</ButtonIcon>
 						</Link>
 					</DescriptionBox>

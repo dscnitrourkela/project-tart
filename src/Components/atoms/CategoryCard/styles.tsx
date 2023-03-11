@@ -79,7 +79,8 @@ export const DescriptionBox = styled.div`
 flex
 flex-col
 bg-background-secondary
-
+md:pb-6
+pb-4
 `}
 	z-index: 299;
 `;
