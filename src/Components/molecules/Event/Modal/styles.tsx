@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import tw from 'twin.macro';
 
 export const BackDrop = styled.div`
-	z-index: 10;
+	z-index: 1000;
 	width: 100vw;
 	height: 100vh;
 	background-color: #ffffff55;

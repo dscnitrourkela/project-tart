@@ -50,4 +50,5 @@ export interface userData {
 	stream?: string;
 	rollNumber?: string;
 	festID?: string;
+	referredBy?: string;
 }

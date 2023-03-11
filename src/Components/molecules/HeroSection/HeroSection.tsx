@@ -29,7 +29,7 @@ const HeroSection: React.FC = () => {
 				<Container>
 					<Img src="NU_Branding.svg" alt="NU"></Img>
 					<ButtonWrapper>
-						<Button fullWidth={isMobileView} btnText="Explore More " />
+						<Button fullWidth={isMobileView} btnText="Explore More" link={'/event/flagship'} />
 						<Button
 							fullWidth={isMobileView}
 							filled

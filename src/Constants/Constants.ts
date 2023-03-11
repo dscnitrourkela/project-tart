@@ -316,26 +316,3 @@ export const STAGES = {
 	NITR_STUDENT_FORM: 'NITR Student Register',
 	NON_NITR_STUDENT_FORM: 'Register',
 };
-
-export const RegisteredEventExample = {
-	id: '6360ceec1c74891efe6bed48',
-	name: '{"heading":"Euphony Live","subHeading":"euphony","prizeAmount":""}',
-	description:
-		'[{"id":0,"desc":"Euphony, the rock band of NITR, presents its once-a-year sonic experience: EuphonyLive! EuphonyLive is a rock concert consisting of covers and original songs, performed by the talented members of NITR’s oldest music club. Including contemporary rock as well as reinvented crowd favourites, EuphonyLive is sure to have something for everyone. Let the music be your master!"}]',
-	poster:
-		'https://res.cloudinary.com/donmjeufi/image/upload/v1666834722/Innovision%202k22/Event%20Posters/euphonylive_euphony_rtz4u0.jpg',
-	locationID: '635e1c662e3082fe09bc498e',
-	startDate: '2022-11-12T19:30:00.000Z',
-	endDate: '2022-11-14T21:00:00.000Z',
-	orgID: ['635c04868e47acb9dd1ba92d'],
-	orgType: 'FEST',
-	notes: [],
-	pocID: [],
-	weekly: false,
-	repeatDay: null,
-	priority: 0,
-	status: 'ACTIVE',
-	type: 'PRO',
-	createdAt: '2022-11-01T07:46:52.300Z',
-	updatedAt: '2022-11-01T07:46:52.300Z',
-};

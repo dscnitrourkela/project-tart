@@ -28,6 +28,7 @@ export const LogoText = styled.p`
     leading-6
     text-color-secondary
     my-auto
+    whitespace-nowrap
 `}
 `;
 
