@@ -28,15 +28,7 @@ const Card: React.FC<CategoryCardProps> = ({ title, description, image, link }) 
 	return (
 		<React.Fragment>
 			<a href={`/event/${link}`}>
-				<Container
-					onMouseOver={() => {
-						setRotorColor('#03016B');
-					}}
-					onMouseOut={() => {
-						setRotorColor('#ACACAC');
-						setArrowColor('#03016B');
-					}}
-					className="group">
+				<Container className="group">
 					<Clap>
 						<PopImage src={image} alt={`${title} Category`} />
 						<Rotor>

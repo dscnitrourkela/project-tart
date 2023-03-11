@@ -79,6 +79,8 @@ export const DescriptionBox = styled.div`
 flex
 flex-col
 bg-background-secondary
+md:pb-6
+pb-4
 `}
 	z-index: 299;
 `;
@@ -100,7 +102,7 @@ export const ButtonText = styled(Heading3)`
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	${tw`
-
+	md:text-[40px]
 `}
 `;
 export const ButtonIcon = styled.div`
