@@ -188,7 +188,6 @@ export const INPUTS: (arg0: userData) => valueProps = ({
 	college = '',
 	stream = '',
 	rollNumber = '',
-	referredBy = 'NA',
 }): valueProps => ({
 	name: {
 		...INIT_STATE,
@@ -309,15 +308,6 @@ export const INPUTS: (arg0: userData) => valueProps = ({
 		key: 'password',
 		show: 'nitr',
 		caption: 'Stay assured, we will not save your password.',
-	},
-	referredBy: {
-		value: referredBy,
-		placeholder: 'Referred By',
-		readOnly: false,
-		type: 'text',
-		inputMode: 'text',
-		key: 'referredBy',
-		show: 'non-nitr',
 	},
 });
 
