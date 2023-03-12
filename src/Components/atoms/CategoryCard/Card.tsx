@@ -38,7 +38,7 @@ const Card: React.FC<CategoryCardProps> = ({ title, description, image, link }) 
 					}}
 					className="group">
 					<Clap>
-						<PopImage src={image} alt={`${title} Category`} />
+						<PopImage src={image} alt={`${title} Category`} loading="lazy" />
 						<Rotor>
 							<SVGIcon Icon={rotor} color={rotorColor} />
 						</Rotor>
