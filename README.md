@@ -18,7 +18,7 @@
     <img src="images/logo.png" alt="Logo" width="130">
   </a>
 
-  <h3 align="center">Nitrutsav 2023</h3>
+  <h3 align="center">NITRUtsav 2023</h3>
 
   <p align="center">
     The official repository for the website of Nitrutsav 2023
