@@ -49,7 +49,7 @@ const Ticket: React.FC<TicketProps> = ({ data, onClick, handleBook, disabled = t
 			</LeftCard>
 			<RightCard>
 				<Head>
-					<Poster src={poster} />
+					<Poster src={poster} width="72px" height="72px" alt={title} loading="lazy" />
 					<div>
 						<Title bold>{title}</Title>
 						<Caption bold>{club}</Caption>

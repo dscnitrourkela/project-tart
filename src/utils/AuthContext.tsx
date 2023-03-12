@@ -42,9 +42,9 @@ const AuthContextProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
 					if (currUser) {
 						setUserData(currUser);
-						if (currUser.festID.includes('nitrutsav-2023') || currUser.rollNumber) {
-							toast.success('Already Registered.');
-						} else toast.error('Kindly do the payment');
+						if (!currUser.festID.includes('nitrutsav-2023') && !currUser.rollNumber) {
+							toast.error('Kindly do the payment');
+						}
 					} else if (user) toast.info('You are not registered. Please register to continue.');
 
 					setLoading(false);

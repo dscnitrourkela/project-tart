@@ -14,7 +14,7 @@ const EventHero: React.FC<HeroSectionProps> = ({ title, description, image }) =>
 				</Title>
 				<Body1>{description}</Body1>
 			</div>
-			<Image src={image} alt="Event Hero" />
+			<Image src={image} alt="Event Hero" loading="lazy" />
 		</Wrapper>
 	);
 };

@@ -67,7 +67,9 @@ const Button: React.FC<ButtonProps> = ({
 				fullWidth={fullWidth}
 				onClick={link ? handleLink : onClick}
 				aria-disabled={disabled}
-				disabled={disabled}>
+				disabled={disabled}
+				title={btnText}
+				aria-label={btnText}>
 				{
 					<ButtonText aria-disabled={disabled} disabled={disabled}>
 						{btnText}

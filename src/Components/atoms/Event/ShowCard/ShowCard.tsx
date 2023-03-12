@@ -18,7 +18,7 @@ const ShowCard: React.FC<eventCardProps> = ({ data, onClick, handleBook, disable
 	return (
 		<Container>
 			<TopCard>
-				<Poster src={poster} />
+				<Poster src={poster} width="298px" height="298px" alt={`Poster - ${title}`} loading="lazy" />
 				<Title bold>{title}</Title>
 				<Body2 bold>{club}</Body2>
 				<Venue>
