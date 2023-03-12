@@ -8,8 +8,11 @@ export const Container = styled.div`
     bg-background-secondary
     flex
     flex-col-reverse
+    mt-48
     w-[328px]
     sm:w-[384px]
+    sm:mt-52
+    md:mt-0
     md:h-[468px]
     md:flex-row
     md:w-auto
