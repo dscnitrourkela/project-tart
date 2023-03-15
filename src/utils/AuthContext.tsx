@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 import { auth } from 'Config/firebase';
-import { userData } from 'Constants/types';
+import { userDataType } from 'Constants/types';
 import { onAuthStateChanged, User } from 'firebase/auth';
 import { toast } from 'react-toastify';
 
@@ -13,8 +13,8 @@ interface FireBaseUser extends User {
 
 interface AuthContextProps {
 	user: FireBaseUser | undefined | null;
-	userData: userData;
-	setUserData: React.Dispatch<React.SetStateAction<userData>>;
+	userData: userDataType;
+	setUserData: React.Dispatch<React.SetStateAction<userDataType>>;
 	accessToken: string;
 	loading: boolean;
 }
