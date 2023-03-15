@@ -23,7 +23,6 @@ export const NavBar = styled.header<MobileNavProps>`
 	position: sticky;
 	top: 0;
 	z-index: 500;
-	display: none;
 	flex-direction: column;
 	width: 100%;
 
