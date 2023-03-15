@@ -52,7 +52,7 @@ const EventPage: React.FC = () => {
 				toast.error('Event registration failed');
 			}
 		} catch (err) {
-			toast.error('User not registered currently');
+			toast.error('Event already registered');
 		}
 	};
 
