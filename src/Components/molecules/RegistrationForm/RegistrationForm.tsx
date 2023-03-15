@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 
 import { Button, Caption, Heading3, Input } from 'Components/atoms';
 import { INPUTS, STAGES } from 'Constants/Constants';
-import { userData, valueProps } from 'Constants/types';
+import { userDataType, valueProps } from 'Constants/types';
 import { toast } from 'react-toastify';
 import { avenueApi } from 'utils/api';
 import { AuthContext } from 'utils/AuthContext';
@@ -152,7 +152,7 @@ const RegistrationForm: React.FC = () => {
 		(payload as { uid: string | undefined }).uid = user?.uid;
 
 		try {
-			const response: { data: userData } | void = await avenueApi
+			const response: { data: userDataType } | void = await avenueApi
 				.post('/user', payload, {
 					headers: {
 						Authorization: `Bearer ${accessToken}`,
@@ -162,12 +162,9 @@ const RegistrationForm: React.FC = () => {
 					throw new Error(error.response.data);
 				});
 
-			console.log(response);
-
 			if (response?.data) {
-				console.log(response.data);
 				setUserData(response.data);
-			} else console.log(response);
+			} else throw new Error('Error saving user');
 		} catch (error) {
 			toast.error((error as { message: string })?.message);
 			if ((error as { message: string })?.message == 'User with this roll number already registered')

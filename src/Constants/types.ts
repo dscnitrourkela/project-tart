@@ -38,7 +38,7 @@ export interface valueProps {
 	};
 }
 
-export interface userData {
+export interface userDataType {
 	id?: string;
 	name?: string;
 	email?: string;
