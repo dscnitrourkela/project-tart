@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 
 import { Button, Caption, Heading3, Input } from 'Components/atoms';
 import { INPUTS, STAGES } from 'Constants/Constants';
-import { valueProps } from 'Constants/types';
+import { userData, valueProps } from 'Constants/types';
 import { toast } from 'react-toastify';
 import { avenueApi } from 'utils/api';
 import { AuthContext } from 'utils/AuthContext';
@@ -152,15 +152,26 @@ const RegistrationForm: React.FC = () => {
 		(payload as { uid: string | undefined }).uid = user?.uid;
 
 		try {
-			const { data: savedUser } = await avenueApi.post('/user', payload, {
-				headers: {
-					Authorization: `Bearer ${accessToken}`,
-				},
-			});
-			if (savedUser) {
-				setUserData(savedUser);
-			} else throw new Error();
+			const response: { data: userData } | void = await avenueApi
+				.post('/user', payload, {
+					headers: {
+						Authorization: `Bearer ${accessToken}`,
+					},
+				})
+				.catch((error) => {
+					throw new Error(error.response.data);
+				});
+
+			console.log(response);
+
+			if (response?.data) {
+				console.log(response.data);
+				setUserData(response.data);
+			} else console.log(response);
 		} catch (error) {
+			toast.error((error as { message: string })?.message);
+			if ((error as { message: string })?.message == 'User with this roll number already registered')
+				toast.info('Kindly use email registered during INNOVISION 2022 to login');
 			throw new Error('Error saving user');
 		}
 	};
