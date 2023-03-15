@@ -13,6 +13,9 @@ const grow = keyframes`
 
 const shrink = keyframes`
   0% { height: auto; }
+  25% { height: 75%; }
+  50% { height: 50%; }
+  75% { height: 25%; }
   100% { height: 0; }
 `;
 
