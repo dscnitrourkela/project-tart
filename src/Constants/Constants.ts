@@ -316,3 +316,80 @@ export const STAGES = {
 	NITR_STUDENT_FORM: 'NITR Student Register',
 	NON_NITR_STUDENT_FORM: 'Register',
 };
+
+export const sponsors = {
+	title: [
+		{
+			src: 'https://res.cloudinary.com/dnylc640l/image/upload/v1678973711/Nitrutsav-23/Sponsors/Hideaway.png',
+			name: 'Hideaway',
+			size: '40%',
+			link: 'https://hideawayrkl.business.site/',
+			width: '150px',
+			alt: 'Hideaway',
+		},
+	],
+	gold: [
+		{
+			src: 'https://res.cloudinary.com/dnylc640l/image/upload/v1678973797/Nitrutsav-23/Sponsors/Vanik.png',
+			name: 'Vanik',
+			size: '90%',
+			link: 'https://www.vanik.org/',
+			width: '170px',
+			alt: 'Vanik',
+		},
+		{
+			src: 'https://res.cloudinary.com/dnylc640l/image/upload/v1678973679/Nitrutsav-23/Sponsors/ECS_Tech.png',
+			name: 'ECS Tech',
+			size: '90%',
+			link: 'http://ecs-tech.in',
+			width: '170px',
+			alt: 'ECS Tech',
+		},
+	],
+	silver: [
+		{
+			src: 'https://res.cloudinary.com/dnylc640l/image/upload/v1678973742/Nitrutsav-23/Sponsors/Nirvaana_Logo.png',
+			name: 'Nirvaana',
+			size: '20%',
+			link: 'https://www.facebook.com/Nirvannaspa/',
+			alt: 'Nirvaana',
+		},
+	],
+	bronze: [
+		{
+			src: 'https://res.cloudinary.com/dnylc640l/image/upload/v1678973648/Nitrutsav-23/Sponsors/Cuts_Creation.png',
+			name: 'Cuts & Creations',
+			size: '100%',
+			link: 'https://www.instagram.com/cuts_and_creati0ns/',
+			alt: 'Cuts & Creations',
+		},
+		{
+			src: 'https://res.cloudinary.com/dnylc640l/image/upload/v1678973908/Nitrutsav-23/Sponsors/ICICI_Bank.png',
+			name: 'ICICI Bank',
+			size: '100%',
+			link: 'https://www.icicibank.com/',
+			alt: 'ICICI Bank',
+		},
+		{
+			src: 'https://res.cloudinary.com/dnylc640l/image/upload/v1678973618/Nitrutsav-23/Sponsors/Bank_of_India.png',
+			name: 'Bank of India',
+			size: '100%',
+			link: 'https://bankofindia.co.in/',
+			alt: 'Bank of India',
+		},
+		{
+			src: 'https://res.cloudinary.com/dnylc640l/image/upload/v1678973908/Nitrutsav-23/Sponsors/State_Bank_of_India.png',
+			name: 'State Bank of India ',
+			size: '100%',
+			link: 'https://www.onlinesbi.sbi/',
+			alt: 'State Bank of India ',
+		},
+		{
+			src: 'https://res.cloudinary.com/dnylc640l/image/upload/v1678973908/Nitrutsav-23/Sponsors/Reliance_Trends.png',
+			name: 'Reliance Trends',
+			size: '100%',
+			link: 'https://www.trends.ajio.com/',
+			alt: 'Reliance Trends',
+		},
+	],
+};
