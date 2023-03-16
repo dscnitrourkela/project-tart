@@ -32,8 +32,8 @@ const Sponsors: React.FC = () => {
 			span: 'span 5',
 		},
 		{
-			title: 'DELTA SPONSORS',
-			sponsors: sponsors.delta,
+			title: 'BRONZE SPONSORS',
+			sponsors: sponsors.bronze,
 			bcolor: '#FFA500',
 			grid: 'repeat(auto-fit, minmax(200px, 1fr))',
 			span: 'span 5',
