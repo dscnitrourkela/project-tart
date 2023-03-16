@@ -16,7 +16,7 @@ export const Container = styled.div`
     md:max-w-[1200px] 
     md:mx-auto
     md:py-16 
-    md:px-4
+    px-4
     `};
 `;
 
@@ -28,9 +28,8 @@ export const FooterWrapper = styled.div`
     py-6 
     mx-12
     md:mx-0
-    md:justify-around 
+    md:justify-between 
     md:flex-row 
-    lg:px-10 
     mb-10
     lg:gap-16
     `};

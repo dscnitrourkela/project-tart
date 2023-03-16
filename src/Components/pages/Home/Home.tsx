@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { About, EventSection, FAQSection, HeroSection, Ticker } from 'Components/molecules';
+import { About, EventSection, FAQSection, HeroSection, Sponsors, Ticker } from 'Components/molecules';
 
 const Home: React.FC = () => {
 	return (
@@ -9,6 +9,7 @@ const Home: React.FC = () => {
 			<Ticker />
 			<About />
 			<EventSection />
+			<Sponsors />
 			<FAQSection />
 		</div>
 	);
