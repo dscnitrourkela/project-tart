@@ -33,8 +33,8 @@ const ProfileSection: React.FC = () => {
 	const handleLogout = (e: React.MouseEvent<HTMLButtonElement>) => {
 		e.preventDefault();
 		if (user) {
-			signout();
 			history.push('/');
+			signout();
 		}
 	};
 
