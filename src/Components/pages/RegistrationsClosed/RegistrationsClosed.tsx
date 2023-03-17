@@ -1,5 +1,6 @@
 import React from 'react';
 
+import closed from 'assets/reg-closed.png';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -13,7 +14,7 @@ const Container = styled.div`
 
 const Image = styled.img`
 	height: 50%;
-	width: 100%;
+	width: auto;
 `;
 
 const TxnHeading = styled.h1`
@@ -41,11 +42,8 @@ const TxnHeading = styled.h1`
 const TxnSuccessScreen: React.FC = () => {
 	return (
 		<Container>
-			<Image
-				src="https://res.cloudinary.com/dnylc640l/image/upload/v1678309574/Nitrutsav-23/assets/txn-success_unfepa.svg"
-				alt="Txn Success"
-			/>
-			<TxnHeading>PAYMENT SUCCESSFUL!!!</TxnHeading>
+			<Image src={closed} alt="Registrations Closed" />
+			<TxnHeading>Registrations Closed!!!</TxnHeading>
 		</Container>
 	);
 };
