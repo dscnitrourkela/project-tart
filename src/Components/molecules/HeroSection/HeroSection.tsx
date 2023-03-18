@@ -28,7 +28,12 @@ const HeroSection: React.FC = () => {
 				<Container>
 					<Img src="NU_Branding.svg" alt="NU"></Img>
 					<ButtonWrapper>
-						<Button fullWidth={isMobileView} btnText="Explore More" link={'/event/flagship'} />
+						<a
+							href="https://drive.google.com/file/d/1ihSZ-PbWi3ONg4WE2QFE1vR_Id9cdJuy/view?usp=sharing"
+							target="_blank"
+							rel="noopener noreferrer">
+							<Button fullWidth={isMobileView} btnText="View Brochure" />
+						</a>
 						<Button
 							fullWidth={isMobileView}
 							filled
